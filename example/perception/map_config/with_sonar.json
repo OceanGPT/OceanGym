@@ -1,0 +1,133 @@
+{
+    "name": "Hovering",
+    "world": "Dam",
+    "main_agent": "auv0",
+    "ticks_per_sec": 10,
+    "frames_per_sec": true,
+    "octree_min": 0.02,
+    "octree_max": 5.0,
+    "agents":[
+        {
+            "agent_name": "auv0",
+            "agent_type": "BlueROV2",
+            "control_scheme": 0,
+            "location": [255.79588, 5.0124497, -64.576065],
+            "rotation": [-0.00020526267, -1.7126215e-05, 28.495195],
+            "sensors": [
+                {
+                    "sensor_type": "LocationSensor",
+                    "socket": "COM",
+                    "configuration": {
+                        "Sigma": 0
+                    }
+                },
+                {
+                    "sensor_type": "RotationSensor",
+                    "socket": "COM"
+                },
+                {
+                    "sensor_type": "RGBCamera",
+                    "sensor_name": "FrontCamera",
+                    "socket": "CameraSocket",
+                    "Hz": 5,
+                    "location": [0.0, 0.0, 0.0],
+                    "rotation": [0.0, 0.0, 0.0],
+                    "configuration": {
+                        "CaptureWidth": 512,
+                        "CaptureHeight": 512
+                    }
+                },
+                {
+                    "sensor_type": "RGBCamera",
+                    "sensor_name": "BackCamera",
+                    "socket": "CameraSocket",
+                    "Hz": 5,
+                    "location": [0.0, -0.65, 0.0],
+                    "rotation": [0.0, 0.0, 180.0],
+                    "configuration": {
+                        "CaptureWidth": 512,
+                        "CaptureHeight": 512
+                    }
+                },
+                {
+
+                    "sensor_type": "RGBCamera",
+                    "sensor_name": "LeftCamera",
+                    "socket": "CameraSocket",
+                    "Hz": 5,
+                    "location": [-0.65, 0.0, 0.0],
+                    "rotation": [0.0, 0.0, 90.0],
+                    "configuration": {
+                        "CaptureWidth": 512,
+                        "CaptureHeight": 512
+                    }
+                },
+                {
+                    "sensor_type": "RGBCamera",
+                    "sensor_name": "RightCamera",
+                    "socket": "CameraSocket",
+                    "Hz": 5,
+                    "location": [0.65, 0.0, 0.0],
+                    "rotation": [0.0, 0.0, -90.0],
+                    "configuration": {
+                        "CaptureWidth": 512,
+                        "CaptureHeight": 512
+                    }
+                },
+                {
+                    "sensor_type": "RGBCamera",
+                    "sensor_name": "UpCamera",
+                    "socket": "CameraSocket",
+                    "Hz": 5,
+                    "location": [0.0, 0.0, 0.0],
+                    "rotation": [0.0, -90.0, 0.0],
+                    "configuration": {
+                        "CaptureWidth": 512,
+                        "CaptureHeight": 512
+                    }
+                },
+                {
+                    "sensor_type": "RGBCamera",
+                    "sensor_name": "DownCamera",
+                    "socket": "CameraSocket",
+                    "Hz": 5,
+                    "location": [0.0, 0.0, 0.0],
+                    "rotation": [0.0, 90.0, 0.0],
+                    "configuration": {
+                        "CaptureWidth": 512,
+                        "CaptureHeight": 512
+                    }
+                },
+                {
+                    "sensor_type": "ImagingSonar",
+                    "socket": "SonarSocket",
+                    "Hz": 5,
+                    "configuration": {
+                        "Azimuth": 120,
+                        "Elevation": 22.5,
+                        "RangeMin": 0.1,
+                        "RangeMax": 30,
+                        "RangeBins": 512,
+                        "AzimuthBins": 512,
+                        "AddSigma": 0.1,
+                        "MultSigma": 0.1,
+                        "MultiPath": false,
+                        "ClusterSize": 5,
+                        "ScaleNoise": false,
+                        "AzimuthStreaks": 0,
+                        "RangeSigma": 0.05,
+                        "ShowWarning": false,
+                        "InitOctreeRange": 30,
+                        "ViewRegion": false,
+                        "ViewOctree": -10,
+                        "WaterDensity": 997,
+                        "WaterSpeedSound": 1480,
+                        "UseApprox": true
+                    }
+                }
+            ]
+        }
+    ],
+    "window_width":  1280,
+    "window_height": 720
+}

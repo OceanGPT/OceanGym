@@ -1,48 +1,12 @@
-# OceanGym
+# Define your model parameters here
 
-**A Benchmark Environment for Underwater Embodied Agents**
+MODELS_TEMPLATE="Yours"
+MODEL_NAME_OR_PATH="Yours"
+API_KEY="Yours"
+BASE_URL="Yours"
 
-- [OceanGym](#oceangym)
-- [Set up Environment](#set-up-environment)
-- [Navigation Task](#navigation-task)
-- [Perception Task](#perception-task)
-  - [Using the Bench to Eval](#using-the-bench-to-eval)
-    - [Import Data](#import-data)
-    - [Simple Multi-views](#simple-multi-views)
-    - [Multi-views with Sonar](#multi-views-with-sonar)
-    - [Multi-views add Sonar Examples](#multi-views-add-sonar-examples)
-  - [Collecting Image Data (Optional)](#collecting-image-data-optional)
-    - [Modify Configuration File](#modify-configuration-file)
-    - [Collect Camera Images Only](#collect-camera-images-only)
-    - [Collect Camera and Sonar Images](#collect-camera-and-sonar-images)
+# Task: Multi-views
 
-# Set up Environment
-
-```bash
-conda create -n oceangym python=3.13.2
-conda activate oceangym
-pip install -r requirements.txt
-```
-
-after that, make sure holoocean is ready
-
-follow this: https://byu-holoocean.github.io/holoocean-docs/v2.0.0/usage/installation.html
-
-# Navigation Task
-
-# Perception Task
-
-## Using the Bench to Eval
-
-### Import Data
-
-```bash
-mkdir -p data/perception
-```
-
-### Simple Multi-views
-
-```bash
 python eval\perception\mv.py \
     --exp_name Result_MV_highLight_00 \
     --exp_idx "all" \
@@ -52,9 +16,7 @@ python eval\perception\mv.py \
     --model_name_or_path $MODEL_NAME_OR_PATH \
     --api_key $API_KEY \
     --base_url $BASE_URL
-```
 
-```bash
 python eval\perception\mv.py \
     --exp_name Result_MV_highLightContext_00 \
     --exp_idx "all" \
@@ -64,9 +26,7 @@ python eval\perception\mv.py \
     --model_name_or_path $MODEL_NAME_OR_PATH \
     --api_key $API_KEY \
     --base_url $BASE_URL
-```
 
-```bash
 python eval\perception\mv.py \
     --exp_name Result_MV_lowLight_00 \
     --exp_idx "all" \
@@ -76,9 +36,7 @@ python eval\perception\mv.py \
     --model_name_or_path $MODEL_NAME_OR_PATH \
     --api_key $API_KEY \
     --base_url $BASE_URL
-```
 
-```bash
 python eval\perception\mv.py \
     --exp_name Result_MV_lowLightContext_00 \
     --exp_idx "all" \
@@ -88,11 +46,9 @@ python eval\perception\mv.py \
     --model_name_or_path $MODEL_NAME_OR_PATH \
     --api_key $API_KEY \
     --base_url $BASE_URL
-```
 
-### Multi-views with Sonar
+# Task: Multi-views with Sonar
 
-```bash
 python eval\perception\mvs.py \
     --exp_name Result_MVwS_highLight_00 \
     --exp_idx "all" \
@@ -102,9 +58,7 @@ python eval\perception\mvs.py \
     --model_name_or_path $MODEL_NAME_OR_PATH \
     --api_key $API_KEY \
     --base_url $BASE_URL
-```
 
-```bash
 python eval\perception\mvs.py \
     --exp_name Result_MVwS_highLightContext_00 \
     --exp_idx "all" \
@@ -114,9 +68,7 @@ python eval\perception\mvs.py \
     --model_name_or_path $MODEL_NAME_OR_PATH \
     --api_key $API_KEY \
     --base_url $BASE_URL
-```
 
-```bash
 python eval\perception\mvs.py \
     --exp_name Result_MVwS_lowLight_00 \
     --exp_idx "all" \
@@ -126,9 +78,7 @@ python eval\perception\mvs.py \
     --model_name_or_path $MODEL_NAME_OR_PATH \
     --api_key $API_KEY \
     --base_url $BASE_URL
-```
 
-```bash
 python eval\perception\mvs.py \
     --exp_name Result_MVwS_lowLightContext_00 \
     --exp_idx "all" \
@@ -138,11 +88,9 @@ python eval\perception\mvs.py \
     --model_name_or_path $MODEL_NAME_OR_PATH \
     --api_key $API_KEY \
     --base_url $BASE_URL
-```
 
-### Multi-views add Sonar Examples
+# Task: Multi-views with Sonar Examples
 
-```bash
 python eval\perception\mvsex.py \
     --exp_name Result_MVwSss_highLight_00 \
     --exp_idx "all" \
@@ -152,9 +100,7 @@ python eval\perception\mvsex.py \
     --model_name_or_path $MODEL_NAME_OR_PATH \
     --api_key $API_KEY \
     --base_url $BASE_URL
-```
 
-```bash
 python eval\perception\mvsex.py \
     --exp_name Result_MVwSss_highLightContext_00 \
     --exp_idx "all" \
@@ -164,9 +110,7 @@ python eval\perception\mvsex.py \
     --model_name_or_path $MODEL_NAME_OR_PATH \
     --api_key $API_KEY \
     --base_url $BASE_URL
-```
 
-```bash
 python eval\perception\mvsex.py \
     --exp_name Result_MVwSss_lowLight_00 \
     --exp_idx "all" \
@@ -176,9 +120,7 @@ python eval\perception\mvsex.py \
     --model_name_or_path $MODEL_NAME_OR_PATH \
     --api_key $API_KEY \
     --base_url $BASE_URL
-```
 
-```bash
 python eval\perception\mvsex.py \
     --exp_name Result_MVwSss_lowLightContext_00 \
     --exp_idx "all" \
@@ -188,28 +130,3 @@ python eval\perception\mvsex.py \
     --model_name_or_path $MODEL_NAME_OR_PATH \
     --api_key $API_KEY \
     --base_url $BASE_URL
-```
-
-## Collecting Image Data (Optional)
-
-### Modify Configuration File
-
-The sample configuration files can be found in `example\perception\map_config`.
-
-### Collect Camera Images Only
-
-```bash
-python task\perception\init_map.py \
-    --scenario without_sonar \
-    --task_name "Exp_Camera_Only" \
-    --rgbcamera "all"
-```
-
-### Collect Camera and Sonar Images
-
-```bash
-python task\perception\init_map_with_sonar.py \
-    --scenario with_sonar \
-    --task_name "Exp_Add_Sonar" \
-    --rgbcamera "FrontCamera"
-```
