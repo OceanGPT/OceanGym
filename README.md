@@ -2,7 +2,7 @@
 <h3 align="center"> A Benchmark Environment for Underwater Embodied Agents </h3>
 
 <p align="center">
-  🌐 <a href="https://arxiv.org/abs/123" target="_blank">Home Page</a>
+  🌐 <a href="https://123" target="_blank">Home Page</a>
   📄 <a href="https://arxiv.org/abs/123" target="_blank">ArXiv Paper</a>
   🤗 <a href="https://huggingface.co/123" target="_blank">Hugging Face</a>
   🌈 <a href="https://123" target="_blank">Google Drive</a>
@@ -23,7 +23,7 @@
 - [👀 Perception Task](#-perception-task)
   - [Using the Bench to Eval](#using-the-bench-to-eval)
   - [Collecting Image Data](#collecting-image-data-optional)
-- [🌻Acknowledgement](#acknowledgement)
+- [🌻 Acknowledgement](#-acknowledgement)
 - [🚩 Citation](#-citation)
 
 # ⚙️ Set up Environment
@@ -35,7 +35,7 @@ conda create -n oceangym python=3.13.2
 conda activate oceangym
 ```
 
-After that, make sure the `HoloOcean` is ready.
+After that, make sure the `HoloOcean` is ready:
 
 ## Deploy HoloOcean
 
@@ -235,7 +235,7 @@ In addition, the -log parameter is useful for being able to close the game windo
    To run the evaluation:
 
    ```bash
-   python task\navigation\utils\evaluate.py
+   python decision\utils\evaluate.py
    ```
 
    The generated results will be saved under the `\eval\navigation` folder.
@@ -531,7 +531,7 @@ python perception\task\init_map_with_sonar.py \
     --rgbcamera "FrontCamera"
 ```
 
-# 🌻Acknowledgement
+# 🌻 Acknowledgement
 
 ~
 
