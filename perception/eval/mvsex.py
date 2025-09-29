@@ -17,12 +17,13 @@ from transformers import AutoModel, AutoTokenizer, AutoProcessor
 from utils import *
 
 
-ship_img = "example\perception\sonar_img\ship.png"
-plane_img = "example\perception\sonar_img\plane.png"
-normal_pipeline_img = "example\perception\sonar_img\normal-pipeline.png"
-damaged_pipeline_img = "example\perception\sonar_img\damaged-pipeline.png"
-tower_img = "example\perception\sonar_img\tower.png"
-container_box_img = "example\perception\sonar_img\container-box.png"
+# If you use Windows, please change the path accordingly.
+ship_img = "asset/perception/sonar_img/ship.png"
+plane_img = "asset/perception/sonar_img/plane.png"
+normal_pipeline_img = "asset/perception/sonar_img/normal-pipeline.png"
+damaged_pipeline_img = "asset/perception/sonar_img/damaged-pipeline.png"
+tower_img = "asset/perception/sonar_img/tower.png"
+container_box_img = "asset/perception/sonar_img/container-box.png"
 
 ship_b64 = encode_image_to_base64(ship_img)
 plane_b64 = encode_image_to_base64(plane_img)

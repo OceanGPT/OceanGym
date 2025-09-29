@@ -282,11 +282,11 @@ The following are the coordinates for each target object in the environment (in 
 
 ## Using the Bench to Eval
 
-> All commands are applicable to **Linux**, but if you using Windows, you only need to change the corresponding path representation.
+> All commands are applicable to **Linux**, so if you using **Windows**, you need to change the corresponding path representation (especially the slash).
 
 ### Import Data
 
-First, you need download our data from [Google Drive](todo) or [Hugging Face](todo).
+First, you need download our data from [Hugging Face](TODO) or [Google Drive](TODO) or [Baidu Drive](TODO).
 
 And then create a new `data` folder in the project root directory:
 
@@ -298,7 +298,7 @@ Finally, put the downloaded data into the corresponding folder.
 
 ### Set your Model Parameters
 
-Open a terminal in the root directory and set it directly, or use the script from [here](scripts\perception\eval.sh).
+Open a terminal in the root directory and set it directly, or use the script from [here](scripts/perception/eval.sh).
 
 | parameter | function |
 | ---| --- |
@@ -328,7 +328,7 @@ All of these scripts evaluate the perception task, and the parameters are as fol
 This command is used to evaluate the **multi-view** perception task under **high** illumination:
 
 ```bash
-python perception\eval\mv.py \
+python perception/eval/mv.py \
     --exp_name Result_MV_highLight_00 \
     --exp_idx "all" \
     --exp_json "/data/perception/highLight.json" \
@@ -342,7 +342,7 @@ python perception\eval\mv.py \
 This command is used to evaluate the **context-based** perception task under **high** illumination:
 
 ```bash
-python perception\eval\mv.py \
+python perception/eval/mv.py \
     --exp_name Result_MV_highLightContext_00 \
     --exp_idx "all" \
     --exp_json "/data/perception/highLightContext.json" \
@@ -356,7 +356,7 @@ python perception\eval\mv.py \
 This command is used to evaluate the **multi-view** perception task under **low** illumination:
 
 ```bash
-python perception\eval\mv.py \
+python perception/eval/mv.py \
     --exp_name Result_MV_lowLight_00 \
     --exp_idx "all" \
     --exp_json "/data/perception/lowLight.json" \
@@ -370,7 +370,7 @@ python perception\eval\mv.py \
 This command is used to evaluate the **context-based** perception task under **low** illumination:
 
 ```bash
-python perception\eval\mv.py \
+python perception/eval/mv.py \
     --exp_name Result_MV_lowLightContext_00 \
     --exp_idx "all" \
     --exp_json "/data/perception/lowLightContext.json" \
@@ -386,7 +386,7 @@ python perception\eval\mv.py \
 This command is used to evaluate the **multi-view** perception task under **high** illumination with **sonar** image:
 
 ```bash
-python perception\eval\mvs.py \
+python perception/eval/mvs.py \
     --exp_name Result_MVwS_highLight_00 \
     --exp_idx "all" \
     --exp_json "/data/perception/highLight.json" \
@@ -400,7 +400,7 @@ python perception\eval\mvs.py \
 This command is used to evaluate the **context-based** perception task under **high** illumination with **sonar** image:
 
 ```bash
-python perception\eval\mvs.py \
+python perception/eval/mvs.py \
     --exp_name Result_MVwS_highLightContext_00 \
     --exp_idx "all" \
     --exp_json "/data/perception/highLightContext.json" \
@@ -414,7 +414,7 @@ python perception\eval\mvs.py \
 This command is used to evaluate the **multi-view** perception task under **low** illumination with **sonar** image:
 
 ```bash
-python perception\eval\mvs.py \
+python perception/eval/mvs.py \
     --exp_name Result_MVwS_lowLight_00 \
     --exp_idx "all" \
     --exp_json "/data/perception/lowLight.json" \
@@ -428,7 +428,7 @@ python perception\eval\mvs.py \
 This command is used to evaluate the **context-based** perception task under **low** illumination with **sonar** image:
 
 ```bash
-python perception\eval\mvs.py \
+python perception/eval/mvs.py \
     --exp_name Result_MVwS_lowLightContext_00 \
     --exp_idx "all" \
     --exp_json "/data/perception/lowLightContext.json" \
@@ -444,7 +444,7 @@ python perception\eval\mvs.py \
 This command is used to evaluate the **multi-view** perception task under **high** illumination with **sona** image **examples**:
 
 ```bash
-python perception\eval\mvsex.py \
+python perception/eval/mvsex.py \
     --exp_name Result_MVwSss_highLight_00 \
     --exp_idx "all" \
     --exp_json "/data/perception/highLight.json" \
@@ -458,7 +458,7 @@ python perception\eval\mvsex.py \
 This command is used to evaluate the **context-based** perception task under **high** illumination with **sona** image **examples**:
 
 ```bash
-python perception\eval\mvsex.py \
+python perception/eval/mvsex.py \
     --exp_name Result_MVwSss_highLightContext_00 \
     --exp_idx "all" \
     --exp_json "/data/perception/highLightContext.json" \
@@ -472,7 +472,7 @@ python perception\eval\mvsex.py \
 This command is used to evaluate the **multi-view** perception task under **low** illumination with **sona** image **examples**:
 
 ```bash
-python perception\eval\mvsex.py \
+python perception/eval/mvsex.py \
     --exp_name Result_MVwSss_lowLight_00 \
     --exp_idx "all" \
     --exp_json "/data/perception/lowLight.json" \
@@ -486,7 +486,7 @@ python perception\eval\mvsex.py \
 This command is used to evaluate the **context-based** perception task under **low** illumination with **sona** image **examples**:
 
 ```bash
-python perception\eval\mvsex.py \
+python perception/eval/mvsex.py \
     --exp_name Result_MVwSss_lowLightContext_00 \
     --exp_idx "all" \
     --exp_json "/data/perception/lowLightContext.json" \
@@ -501,7 +501,7 @@ python perception\eval\mvsex.py \
 
 ### Modify Configuration File
 
-The sample configuration files can be found in `asset\perception\map_config`. You need to copy this and paste it into your HoloOcean project's configuration.
+The sample configuration files can be found in `asset/perception/map_config`. You need to copy this and paste it into your HoloOcean project's configuration.
 
 ### Collect Camera Images Only
 
@@ -514,7 +514,7 @@ This command is used to collect **camera** images only, and the parameters are a
 | rgbcamera | The camera directions you can choose. If select all, enter "all". |
 
 ```bash
-python perception\task\init_map.py \
+python perception/task/init_map.py \
     --scenario without_sonar \
     --task_name "Exp_Camera_Only" \
     --rgbcamera "all"
@@ -525,7 +525,7 @@ python perception\task\init_map.py \
 This command is used to collect both **camera** images and **sonar** images at same time:
 
 ```bash
-python perception\task\init_map_with_sonar.py \
+python perception/task/init_map_with_sonar.py \
     --scenario with_sonar \
     --task_name "Exp_Add_Sonar" \
     --rgbcamera "FrontCamera"
