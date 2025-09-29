@@ -2,11 +2,11 @@
 <h3 align="center"> A Benchmark Environment for Underwater Embodied Agents </h3>
 
 <p align="center">
-  <a href="https://arxiv.org/abs/123" target="_blank">🌐 Home Page</a>
-  <a href="https://arxiv.org/abs/123" target="_blank">📄 ArXiv Paper</a>
-  <a href="https://huggingface.co/123" target="_blank">🤗 Hugging Face</a>
-  <a href="https://123" target="_blank">🌈 Google Drive</a>
-  <a href="https://123" target="_blank">☁️ Baidu Drive</a>
+  🌐 <a href="https://arxiv.org/abs/123" target="_blank">Home Page</a>
+  📄 <a href="https://arxiv.org/abs/123" target="_blank">ArXiv Paper</a>
+  🤗 <a href="https://huggingface.co/123" target="_blank">Hugging Face</a>
+  🌈 <a href="https://123" target="_blank">Google Drive</a>
+  ☁️ <a href="https://123" target="_blank">Baidu Drive</a>
 </p>
 
 - [⚙️ Set up Environment](#️-set-up-environment)
@@ -22,15 +22,7 @@
   - [Evaluation Criteria](#evaluation-criteria)
 - [👀 Perception Task](#-perception-task)
   - [Using the Bench to Eval](#using-the-bench-to-eval)
-    - [Import Data](#import-data)
-    - [Set your Model Parameters](#set-your-model-parameters)
-    - [Simple Multi-views](#simple-multi-views)
-    - [Multi-views with Sonar](#multi-views-with-sonar)
-    - [Multi-views add Sonar Examples](#multi-views-add-sonar-examples)
-  - [Collecting Image Data (Optional)](#collecting-image-data-optional)
-    - [Modify Configuration File](#modify-configuration-file)
-    - [Collect Camera Images Only](#collect-camera-images-only)
-    - [Collect Camera and Sonar Images](#collect-camera-and-sonar-images)
+  - [Collecting Image Data](#collecting-image-data-optional)
 - [🌻Acknowledgement](#acknowledgement)
 - [🚩 Citation](#-citation)
 
