@@ -128,7 +128,7 @@ In addition, the -log parameter is useful for being able to close the game windo
 
 # 🧠 Decision Task
 
-> All commands are only applicable to **Windows** only, because it requires full support from the `UE5 Engine`.
+> All commands are applicable to **Windows** only, because it requires full support from the `UE5 Engine`.
 
 ## Quick Start
 
@@ -282,7 +282,7 @@ The following are the coordinates for each target object in the environment (in 
 
 ## Using the Bench to Eval
 
-> All commands are only applicable to **Linux**. If you are using Windows, please change the corresponding path representation.
+> All commands are applicable to **Linux**, but if you using Windows, you only need to change the corresponding path representation.
 
 ### Import Data
 
@@ -501,7 +501,7 @@ python perception\eval\mvsex.py \
 
 ### Modify Configuration File
 
-The sample configuration files can be found in `example\perception\map_config`. You need to copy this and paste it into your HoloOcean project's configuration.
+The sample configuration files can be found in `asset\perception\map_config`. You need to copy this and paste it into your HoloOcean project's configuration.
 
 ### Collect Camera Images Only
 
