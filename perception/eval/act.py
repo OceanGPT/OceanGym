@@ -13,13 +13,7 @@ import torch
 from openai import OpenAI
 from transformers import AutoProcessor
 
-
-def set_seed(seed: int):
-    random.seed(seed)
-    np.random.seed(seed)
-    torch.manual_seed(seed)
-    if torch.cuda.is_available():
-        torch.cuda.manual_seed_all(seed)
+from utils import *
 
 
 def get_imgs(images_dir: str, directions: Set[str], idx: int) -> list[str]:
@@ -37,11 +31,6 @@ def get_imgs(images_dir: str, directions: Set[str], idx: int) -> list[str]:
             imgs.append(os.path.join(images_dir, name))
     return imgs
 
-
-def encode_image_to_base64(image_path: str) -> str:
-    """turn image to base64 string"""
-    with open(image_path, "rb") as f:
-        return base64.b64encode(f.read()).decode("utf-8")
 
 
 def compare_answer(answer: str, goal: List[str], pattern: re.Pattern,) -> List[str]:

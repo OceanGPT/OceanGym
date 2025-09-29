@@ -1,0 +1,112 @@
+{
+    "name": "OceanGym",
+    "main_agent": "auv0",
+    "ticks_per_sec": 100,
+    "frames_per_sec": true,
+    "octree_min": 0.02,
+    "octree_max": 5.0,
+    "agents":[
+        {
+            "agent_name": "auv0",
+            "agent_type": "HoveringAUV",
+            "control_scheme": 0,
+            "location": [144 ,-114,-63],
+            "rotation": [0.0, 0.0, -135.0],
+            "sensors": [
+                {
+                    "sensor_type": "LocationSensor",
+                    "socket": "COM",
+                    "configuration": {
+                        "Sigma": 0
+                    }
+                },
+                {
+                    "sensor_type": "RGBCamera",
+                    "sensor_name": "FrontCamera",
+                    "socket": "CameraSocket",
+                    "Hz": 20,
+                    "location": [1.0, 0.0, 0.5],
+                    "rotation": [0.0, 0.0, 0.0],
+                    "configuration": {
+                        "CaptureWidth": 512,
+                        "CaptureHeight": 512
+                    }
+                },
+
+                {
+
+                    "sensor_type": "RGBCamera",
+                    "sensor_name": "RightCamera",
+                    "socket": "CameraLeftSocket",
+                    "Hz": 20,
+                    "location": [0.0, -1.0, 0.5],
+                    "rotation": [0.0, 0.0, -90.0],
+                    "configuration": {
+                        "CaptureWidth": 256,
+                        "CaptureHeight": 256
+                    }
+                },
+                {
+                    "sensor_type": "RGBCamera",
+                    "sensor_name": "LeftCamera",
+                    "socket": "CameraRightSocket",
+                    "Hz": 20,
+                    "location": [0.0, 1.0, 0.5],
+                    "rotation": [0.0, 0.0, 90.0],
+                    "configuration": {
+                        "CaptureWidth": 256,
+                        "CaptureHeight": 256
+                    }
+                },
+                {
+                    "sensor_type": "RGBCamera",
+                    "sensor_name": "UpCamera",
+                    "socket": "CameraSocket",
+                    "Hz": 20,
+                    "location": [0.0, 0.0, 1.0],
+                    "rotation": [0.0, -90.0, 0.0],
+                    "configuration": {
+                        "CaptureWidth": 256,
+                        "CaptureHeight": 256
+                    }
+                },
+                {
+                    "sensor_type": "RGBCamera",
+                    "sensor_name": "DownCamera",
+                    "socket": "CameraSocket",
+                    "Hz": 20,
+                    "location": [0.0, 0.0, -1.0],
+                    "rotation": [0.0, 90.0, 0.0],
+                    "configuration": {
+                        "CaptureWidth": 256,
+                        "CaptureHeight": 256
+                    }
+                },
+                {
+                    "sensor_type": "RGBCamera",
+                    "sensor_name": "BackCamera",
+                    "socket": "CameraSocket",
+                    "Hz": 20,
+                    "location": [-1.0, 0.0, 0.0],
+                    "rotation": [0.0, 0.0, 180.0],
+                    "configuration": {
+                        "CaptureWidth": 256,
+                        "CaptureHeight": 256
+                    }
+                },
+                {
+                    "sensor_type": "LocationSensor",
+                    "sensor_name": "Location",
+                    "socket": "COM",
+                    "configuration": {
+                        "Sigma": 0
+                    }
+                }
+        
+            ]
+        }
+    ],
+
+    "window_width":  1280,
+    "window_height": 720
+}

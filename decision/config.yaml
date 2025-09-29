@@ -1,0 +1,24 @@
+global:
+  base_path: "<your_base_path>"
+
+defaults:
+  camera_keys:
+    - "LeftCamera"
+    - "RightCamera"
+    - "DownCamera"
+    - "UpCamera"
+    - "FrontCamera"
+    - "BackCamera"
+  interval: 20
+  time: 30 # time limit in minutes
+
+scenario:
+  name: "OceanGym"
+
+llm:
+  mode: "api"  #  "api" or "local"
+  api:
+    api_key: "<your_api_key>"
+    base_url: "<your_base_url>"
+    model: "<your_model>"
+    

@@ -1,6 +1,7 @@
 # This project specific .gitignore file has been generated using
 /data
 /outputs
+/temp
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
