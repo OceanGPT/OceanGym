@@ -2,9 +2,11 @@
 <h3 align="center"> A Benchmark Environment for Underwater Embodied Agents </h3>
 
 <p align="center">
-  <a href="https://arxiv.org/abs/123" target="_blank">📄ArXiv Paper</a>
-  • <a href="https://123" target="_blank">🌩️Google Drive</a>
-  • <a href="https://huggingface.co/123" target="_blank">🤗Hugging Face</a>
+  <a href="https://arxiv.org/abs/123" target="_blank">🌐 Home Page</a>
+  <a href="https://arxiv.org/abs/123" target="_blank">📄 ArXiv Paper</a>
+  <a href="https://huggingface.co/123" target="_blank">🤗 Hugging Face</a>
+  <a href="https://123" target="_blank">🌈 Google Drive</a>
+  <a href="https://123" target="_blank">☁️ Baidu Drive</a>
 </p>
 
 - [⚙️ Set up Environment](#️-set-up-environment)
@@ -29,6 +31,7 @@
     - [Modify Configuration File](#modify-configuration-file)
     - [Collect Camera Images Only](#collect-camera-images-only)
     - [Collect Camera and Sonar Images](#collect-camera-and-sonar-images)
+- [🌻Acknowledgement](#acknowledgement)
 - [🚩 Citation](#-citation)
 
 # ⚙️ Set up Environment
@@ -176,17 +179,17 @@ In addition, the -log parameter is useful for being able to close the game windo
 
    1. First, open the project
 
-    ![image1](asset\img\a1.png)
+  <img src="asset\img\a1.png" alt="method" style="zoom: 50%;" />
 
    2. Find the **HAIDI** map in **demo** directory
 
-    ![image1](asset\img\a2.jpg)
+  <img src="asset\img\a2.jpg" alt="method" style="zoom: 50%;" />
 
-   3. Run the project
+   1. Run the project
 
-    ![image1](asset\img\a3.png)
+  <img src="asset\img\a3.png" alt="method" style="zoom: 50%;" />
 
-6. **Run a Task Script**
+1. **Run a Task Script**
 
    For example, to run task 4:
 
@@ -535,6 +538,10 @@ python perception\task\init_map_with_sonar.py \
     --task_name "Exp_Add_Sonar" \
     --rgbcamera "FrontCamera"
 ```
+
+# 🌻Acknowledgement
+
+~
 
 # 🚩 Citation
 
