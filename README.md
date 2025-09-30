@@ -69,7 +69,7 @@ pip install -r requirements.txt
    For example, to run task 4:
 
    ```bash
-   python task\navigation\tasks\task4.py
+   python decision\tasks\task4.py
    ```
 
    Follow the keyboard instructions or switch to LLM mode for automatic decision-making.
@@ -119,10 +119,10 @@ pip install -r requirements.txt
    To run the evaluation:
 
    ```bash
-   python task\navigation\utils\evaluate.py
+   python decision\utils\evaluate.py
    ```
 
-   The generated results will be saved under the `\eval\navigation` folder.
+   The generated results will be saved under the `\eval\decision` folder.
 
 ## Perception Task
 
@@ -251,19 +251,23 @@ C:\Users\Windows\AppData\Local\holoocean\2.0.0\worlds\Ocean
 
 **1. If you're use it in first time, you have to compile it**
 
-  1-1. find the Holodeck.uproject in **engine** folder
+  1-1. find the Holodeck.uproject in **engine** folder \
+  <img src="asset\img\pic1.png" style="width: 60%; height: auto;" align="center">
 
-  1-2. Right-click and select:Generate Visual Studio project files
+  1-2. Right-click and select:Generate Visual Studio project files \
+    <img src="asset\img\pic2.png" style="width: 60%; height: auto;" align="center">
 
-  1-3. If the version is not 5.3.2,please choose the Switch Unreal Engine Version
+  1-3. If the version is not 5.3.2,please choose the Switch Unreal Engine Version \
+    <img src="asset\img\pic3.png" style="width: 60%; height: auto;" align="center">
 
-  1-4. Then open the project
+  1-4. Then open the project \
+    <img src="asset\img\pic4.png" style="width: 60%; height: auto;" align="center">
+  
+**2. Then find the `HAIDI` map in `demo` directory** \
+    <img src="asset\img\pic5.png" style="width: 60%; height: auto;" align="center">
 
-**2. Then find the `HAIDI` map in `demo` directory**
-
-**3. Run the project**
-
-![../_images/standalone-game.png](https://byu-holoocean.github.io/holoocean-docs/v2.0.1/_images/standalone-game.png)
+**3. Run the project** \
+    <img src="asset\img\pic6.png" style="width: 60%; height: auto;" align="center">
 
 # 🧠 Decision Task
 
