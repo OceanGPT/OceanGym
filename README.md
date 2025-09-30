@@ -5,7 +5,7 @@
   🌐 <a href="https://123" target="_blank">Home Page</a>
   📄 <a href="https://arxiv.org/abs/123" target="_blank">ArXiv Paper</a>
   🤗 <a href="https://huggingface.co/datasets/zjunlp/OceanGym" target="_blank">Hugging Face</a>
-  ☁️ <a href="https://drive.google.com/drive/folders/1VhrvhvbWvnaS4EyeyaV1fmTQ6gPo8GCN?usp=sharing" target="_blank">Google Drive</a>
+  ☁️ <a href="https://drive.google.com/drive/folders/1H7FTbtOCKTIEGp3R5RNsWvmxZ1oZxQih?usp=sharing" target="_blank">Google Drive</a>
 </p>
 
   <img src="asset\img\o1.png" align=center>
