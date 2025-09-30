@@ -5,132 +5,53 @@
   🌐 <a href="https://123" target="_blank">Home Page</a>
   📄 <a href="https://arxiv.org/abs/123" target="_blank">ArXiv Paper</a>
   🤗 <a href="https://huggingface.co/123" target="_blank">Hugging Face</a>
-  🌈 <a href="https://123" target="_blank">Google Drive</a>
-  ☁️ <a href="https://123" target="_blank">Baidu Drive</a>
+  ☁️ <a href="https://123" target="_blank">Google Drive</a>
 </p>
 
+  <img src="asset\img\p1.png" align=center>
+
+**OceanGym** is a high-fidelity embodied underwater environment that simulates a realistic ocean setting with diverse scenes. As illustrated in figure, OceanGym establishes a robust benchmark for evaluating autonomous agents through a series of challenging tasks, encompassing various perception analyses and decision-making navigation. The platform facilitates these evaluations by supporting multi-modal perception and providing action spaces for continuous control.
+
+# 📜 Contents
+
+- [📜 Contents](#-contents)
+- [💐 Acknowledgement](#-acknowledgement)
+- [🔔 News](#-news)
+- [▶️ Quick Start](#️-quick-start)
+  - [Decision Task](#decision-task)
+  - [Perception Task](#perception-task)
 - [⚙️ Set up Environment](#️-set-up-environment)
-  - [Deploy HoloOcean](#deploy-holoocean)
-  - [Cloning](#cloning)
-  - [Opening \& Prepping Project](#opening--prepping-project)
-  - [Setting up VSCode](#setting-up-vscode)
-  - [Compiling](#compiling)
-  - [Launching Game Live](#launching-game-live)
 - [🧠 Decision Task](#-decision-task)
-  - [Quick Start](#quick-start)
   - [Target Object Locations](#target-object-locations)
   - [Evaluation Criteria](#evaluation-criteria)
 - [👀 Perception Task](#-perception-task)
   - [Using the Bench to Eval](#using-the-bench-to-eval)
-  - [Collecting Image Data](#collecting-image-data-optional)
-- [🌻 Acknowledgement](#-acknowledgement)
+    - [Import Data](#import-data)
+    - [Set your Model Parameters](#set-your-model-parameters)
+    - [Simple Multi-views](#simple-multi-views)
+    - [Multi-views with Sonar](#multi-views-with-sonar)
+    - [Multi-views add Sonar Examples](#multi-views-add-sonar-examples)
+  - [Collecting Image Data](#collecting-image-data)
+    - [Modify Configuration File](#modify-configuration-file)
+    - [Collect Camera Images Only](#collect-camera-images-only)
+    - [Collect Camera and Sonar Images](#collect-camera-and-sonar-images)
+- [🎖️ Results](#️-results)
 - [🚩 Citation](#-citation)
 
-# ⚙️ Set up Environment
+# 💐 Acknowledgement
 
-This project is based on the `HoloOcean` environment.
+OceanGym is based on [HoloOcean](https://github.com/byu-holoocean). Thanks for their great contributions!
 
-```bash
-conda create -n oceangym python=3.13.2
-conda activate oceangym
-```
+# 🔔 News
 
-After that, make sure the `HoloOcean` is ready:
+- 09-2025, we launch the OceanGym project.
 
-## Deploy HoloOcean
+# ▶️ Quick Start
 
-Refence at: https://byu-holoocean.github.io/holoocean-docs/v2.0.1/develop/start.html#getting-started
+## Decision Task
 
-The steps in this page are only necessary if you want to change HoloOcean’s C++ code or if you want to use Unreal Engine to develop new worlds. It is not necessary for making changes to the Python API or for using HoloOcean as a user.
+> Only the environment is ready!
 
-While developing for Unreal Engine is supported on both Linux and Windows, we have found the Unreal Engine development tools to be more stable and straightforward in Windows.
-
-Developing in HoloOcean requires the following additional dependencies:
-
-- [Unreal Engine 5.3](https://dev.epicgames.com/documentation/en-us/unreal-engine/installing-unreal-engine?application_version=5.3)
-- [Visual Studio 2022 or 2019](https://visualstudio.microsoft.com/)
-  - See UE [documentation](https://dev.epicgames.com/documentation/en-us/unreal-engine/setting-up-visual-studio-development-environment-for-cplusplus-projects-in-unreal-engine?application_version=5.3) for setup
-- git
-- Python installation environment (we recommend conda)
-- numpy version >= 2.0.0
-
-HoloOcean 2.0 requires Numpy version 2. This is a breaking change from HoloOcean 1.0, which used numpy version 1. Please ensure you are using the version of numpy appropriate for the version of HoloOcean you are using.
-
-## Cloning
-
-Refence at: https://byu-holoocean.github.io/holoocean-docs/v2.0.1/develop/start.html#cloning
-
-For running holoocean live, you’ll need to setup both the C++ and Python portions of HoloOcean.
-
-> - Clone [holoocean](https://github.com/byu-holoocean/HoloOcean).
-> - Navigate into the local repository.
-> - Checkout to the branch you want to develop on, likely the develop branch, which you can access through `git checkout develop`,
->   - Alternatively, create your own new branch for the feature or addition through `git checkout -b [your branch name] [the branch you want to branch off of]`
-
-You can now install the Python package by running `pip install -e client/` (or `pip install .`). Make sure not to skip this step - reinstalling the package is necessary to apply the changes from switching branches.
-
-## Opening & Prepping Project
-
-Refence at: https://byu-holoocean.github.io/holoocean-docs/v2.0.1/develop/start.html#opening-prepping-project
-
-To open the HoloOcean project in the Unreal Editor, find the `holodeck.uproject` file in the `holoocean/engine` directory. Double-click this file, and choose “5.3” if an engine version dialog opens up. Alternatively, open the Unreal Editor and select “Open Project” from the main menu.
-
-If you get a dialog that says “The following modules are missing or built with a different engine version”, click “yes” to rebuild the project. This will take a few minutes, and you may get a few errors. If you do, click “yes” to all of them.
-
-![../_images/the-build-error.png](https://byu-holoocean.github.io/holoocean-docs/v2.0.1/_images/the-build-error.png)
-
-If you continue to get errors, please reference [Troubleshooting](https://byu-holoocean.github.io/holoocean-docs/v2.0.1/develop/troubleshooting.html#troubleshooting).
-
-In the Unreal Editor, go to Platforms -> <your operating system> -> Cook Content. After a few minutes you should get a success popup in the lower right.
-
-## Setting up VSCode
-
-Refence at: https://byu-holoocean.github.io/holoocean-docs/v2.0.1/develop/start.html#setting-up-vscode
-
-If you would like to use VSCode instead of Visual Studio for HoloOcean, you can do the following:
-
-- In Unreal Editor, Go to Edit -> Editor Preferences
-- Then go to General -> Source Code -> Source Code Editor and select Visual Studio Code
-- Once this is done you should now be able to generate a new Visual Studio Code project using File -> Generate Visual Studio Code Project
-- To open up Visual Studio Code go to File -> Open Visual Studio Code
-
-## Compiling
-
-Refence at: https://byu-holoocean.github.io/holoocean-docs/v2.0.1/develop/start.html#compiling
-
-You need to recompile the project after making any changes to the C++ code.
-
-Generally you can compile by clicking the “Compile” button in Unreal Editor at the bottom-right corner of the screen. It might be hidden if your screen isn’t wide enough. To ensure it compiles properly, click on the 3 vertical dots next to the compile button and make sure “Enable Live Coding” is turned off.
-
-![../_images/compile-button-location.png](https://byu-holoocean.github.io/holoocean-docs/v2.0.1/_images/compile-button-location.png)
-
-If you want to use Visual Studio to compile HoloOcean, you will need to generate the .sln file by right clicking on the `holodeck.uproject` file within the engine folder, and then clicking on “Generate Visual Studio Project Files”. If you are using Windows 11, after right clicking on the uproject file, you will need to click “Show more options” in order to find the right option.
-
-![../_images/generate-vs-files.png](https://byu-holoocean.github.io/holoocean-docs/v2.0.1/_images/generate-vs-files.png)
-
-Double click the generated .sln file to open it within Visual Studio. From there, you can right click on the Solution on the right hand side of the screen and select “Build Solution”.
-
-![../_images/build-in-visual-studio.png](https://byu-holoocean.github.io/holoocean-docs/v2.0.1/_images/build-in-visual-studio.png)
-
-## Launching Game Live
-
-Refence at: https://byu-holoocean.github.io/holoocean-docs/v2.0.1/develop/start.html#launching-game-live
-
-To avoid having to package the project anytime you want to see changes to your code, you can play the game live from Unreal Editor and then attached your Python code to it. This is referred to as “running in standalone”. This is a multi-step process, as follows.
-
-If developing a sonar module, in UE5 click the 3 dots next to the “Play” button in the top toolbar, and click “Advanced Settings”. Add the following line to “Additional Launch Parameters”
-
-![../_images/standalone-game.png](https://byu-holoocean.github.io/holoocean-docs/v2.0.1/_images/standalone-game.png)
-
-These are all in meters. Tweak them as needed.
-
-In addition, the -log parameter is useful for being able to close the game window easily, as well as for seeing log messages for debugging purposes.
-
-# 🧠 Decision Task
-
-> All commands are applicable to **Windows** only, because it requires full support from the `UE5 Engine`.
-
-## Quick Start
 
 1. **Install Dependencies**
 
@@ -240,6 +161,124 @@ In addition, the -log parameter is useful for being able to close the game windo
 
    The generated results will be saved under the `\eval\navigation` folder.
 
+## Perception Task
+
+**Step 1**: Prepare the dataset
+
+After downloading from [Hugging Face](https://huggingface.co/datasets/zjunlp/OceanGym), put it into the `data/perception` folder.
+
+**Step 2**: Select model parameters
+
+| parameter | function |
+| ---| --- |
+| model_template | The large language model message queue template you selected. |
+| model_name_or_path | If it is an API model, it is the model name; if it is a local model, it is the path. |
+| api_key | If it is an API model, enter your key. |
+| base_url | If it is an API model, enter its baseful URL. |
+
+Now we only support OpenAI, Google Gemma, Qwen and OpenBMB.
+
+```bash
+MODELS_TEMPLATE="Yours"
+MODEL_NAME_OR_PATH="Yours"
+API_KEY="Yours"
+BASE_URL="Yours"
+```
+
+**Step 3**: Run the experiments
+
+| parameter | function |
+| ---| --- |
+| exp_name | Customize the name of the experiment to save the results. |
+| exp_idx | Select the experiment number, or enter "all" to select all. |
+| exp_json | JSON file containing the experiment label data. |
+| images_dir | The folder where the experimental image data is stored. |
+
+For the experimental types, We designed (1) multi-view perception task and (2) context-based perception task.
+
+For the lighting conditions, We designed (1) high illumination and (2) low illumination.
+
+For the auxiliary sonar, We designed (1) without sonar image (2) zero-shot sonar image and (3) sonar image with few sonar example.
+
+Such as this command is used to evaluate the **multi-view** perception task under **high** illumination:
+
+
+```bash
+python perception/eval/mv.py \
+    --exp_name Result_MV_highLight_00 \
+    --exp_idx "all" \
+    --exp_json "/data/perception/highLight.json" \
+    --images_dir "/data/perception/highLight" \
+    --model_template $MODELS_TEMPLATE \
+    --model_name_or_path $MODEL_NAME_OR_PATH \
+    --api_key $API_KEY \
+    --base_url $BASE_URL
+```
+
+For more patterns about perception tasks, please read [this](#-perception-task) part carefully.
+
+# ⚙️ Set up Environment
+
+This project is based on the HoloOcean environment. 💐
+
+> We have placed a simplified version here. If you encounter any detailed issues, please refer to the [original installation document](https://byu-holoocean.github.io/holoocean-docs/v2.1.0/usage/installation.html).
+
+
+**Step 1: Clone HoloOcean**
+
+Make sure your GitHub account is linked to an **Epic Games** account, please Follow the steps [here](https://www.unrealengine.com/en-US/ue-on-github) and remember to accept the email invitation from Epic Games.
+
+After that clone HoloOcean:
+
+```bash
+git clone git@github.com:byu-holoocean/HoloOcean.git holoocean
+```
+
+**Step 2: Packaged Installation**
+
+1. Additional Requirements
+
+For the build-essential package for Linux, you can run the following console command:
+
+```bash
+sudo apt install build-essential
+```
+
+2. Python Library
+
+From the cloned repository, install the Python package by doing the following:
+
+```bash
+cd holoocean/client
+pip install .
+```
+
+3. Worlds Packages
+
+To install the most recent version of the Ocean worlds package, open a Python shell by typing the following and hit enter:
+
+```bash
+python
+```
+
+Install the package by running the following Python commands:
+
+```python
+import holoocean
+holoocean.install("Ocean")
+```
+
+To do these steps in a single console command, use:
+
+```bash
+python -c "import holoocean; holoocean.install('Ocean')"
+```
+
+
+# 🧠 Decision Task
+
+> All commands are applicable to **Windows** only, because it requires full support from the `UE5 Engine`.
+
 ## Target Object Locations
 
 We have provided eight tasks. For specific task descriptions, please refer to the paper.
@@ -283,10 +322,12 @@ The following are the coordinates for each target object in the environment (in 
 ## Using the Bench to Eval
 
 > All commands are applicable to **Linux**, so if you using **Windows**, you need to change the corresponding path representation (especially the slash).
+>
+> Now we only support OpenAI, Google Gemma, Qwen and OpenBMB. If you need to customize the model, please contact the author.
 
 ### Import Data
 
-First, you need download our data from [Hugging Face](TODO) or [Google Drive](TODO) or [Baidu Drive](TODO).
+First, you need download our data from [Hugging Face](https://huggingface.co/datasets/zjunlp/OceanGym).
 
 And then create a new `data` folder in the project root directory:
 
@@ -497,7 +538,9 @@ python perception/eval/mvsex.py \
     --base_url $BASE_URL
 ```
 
-## Collecting Image Data (Optional)
+## Collecting Image Data
+
+> This part is optional. Only use when you need to collect pictures by yourself.
 
 ### Modify Configuration File
 
@@ -531,17 +574,45 @@ python perception/task/init_map_with_sonar.py \
     --rgbcamera "FrontCamera"
 ```
 
-# 🌻 Acknowledgement
+# 🎖️ Results
 
 ~
 
 # 🚩 Citation
 
-If this paper or benchmark is helpful, please kindly cite as this, thanks!
+If this OceanGym paper or benchmark is helpful, please kindly cite as this:
 
 ```bibtex
-@inproceedings{oceangym,
+@inproceedings{xxx,
   title={OceanGym: A Benchmark Environment for Underwater Embodied Agents},
   ...
 }
 ```
+
+General HoloOcean use:
+
+```bibtex
+@inproceedings{Potokar22icra,
+   author = {E. Potokar and S. Ashford and M. Kaess and J. Mangelson},
+   title = {Holo{O}cean: An Underwater Robotics Simulator},
+   booktitle = {Proc. IEEE Intl. Conf. on Robotics and Automation, ICRA},
+   address = {Philadelphia, PA, USA},
+   month = may,
+   year = {2022}
+}
+```
+
+Simulation of Sonar (Imaging, Profiling, Sidescan) sensors:
+
+```bibtex
+@inproceedings{Potokar22iros,
+   author = {E. Potokar and K. Lay and K. Norman and D. Benham and T. Neilsen and M. Kaess and J. Mangelson},
+   title = {Holo{O}cean: Realistic Sonar Simulation},
+   booktitle = {Proc. IEEE/RSJ Intl. Conf. Intelligent Robots and Systems, IROS},
+   address = {Kyoto, Japan},
+   month = {Oct},
+   year = {2022}
+}
+```
+
+💐 Thanks!
