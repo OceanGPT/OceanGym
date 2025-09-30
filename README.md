@@ -14,11 +14,8 @@
 
 # 💐 Acknowledgement
 
-OceanGym environment is based on Unreal Engine (UE) 5.3.
+OceanGym environment is built upon Unreal Engine (UE) 5.3, with certain components developed by drawing inspiration from and partially based on [HoloOcean](https://github.com/byu-holoocean). We sincerely acknowledge their valuable contribution.
 
-Partial functions of OceanGym is developed on [HoloOcean](https://github.com/byu-holoocean).
-
-Thanks for their great contributions!
 
 # 🔔 News
 
