@@ -12,9 +12,17 @@
 
 **OceanGym** is a high-fidelity embodied underwater environment that simulates a realistic ocean setting with diverse scenes. As illustrated in figure, OceanGym establishes a robust benchmark for evaluating autonomous agents through a series of challenging tasks, encompassing various perception analyses and decision-making navigation. The platform facilitates these evaluations by supporting multi-modal perception and providing action spaces for continuous control.
 
-# 📜 Contents
+# 💐 Acknowledgement
 
-- [📜 Contents](#-contents)
+OceanGym is based on [HoloOcean](https://github.com/byu-holoocean). Thanks for their great contributions!
+
+# 🔔 News
+
+- 09-2025, we launch the OceanGym project.
+
+---
+
+**Contents:**
 - [💐 Acknowledgement](#-acknowledgement)
 - [🔔 News](#-news)
 - [▶️ Quick Start](#️-quick-start)
@@ -39,14 +47,6 @@
   - [Decision Task](#decision-task-1)
   - [Perception Task](#perception-task-1)
 - [🚩 Citation](#-citation)
-
-# 💐 Acknowledgement
-
-OceanGym is based on [HoloOcean](https://github.com/byu-holoocean). Thanks for their great contributions!
-
-# 🔔 News
-
-- 09-2025, we launch the OceanGym project.
 
 # ▶️ Quick Start
 
