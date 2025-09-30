@@ -50,61 +50,17 @@ OceanGym is based on [HoloOcean](https://github.com/byu-holoocean). Thanks for t
 
 # ▶️ Quick Start
 
+Install the experimental code environment using pip:
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Decision Task
 
-> Only the environment is ready!
+> Only the environment is ready! Build the environment based on [here](#️-set-up-environment).
 
-
-1. **Install Dependencies**
-
-   Make sure you have Python 3.10+ and the required packages:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-2. **Install HoloOcean Ocean World**
-
-   In a Python shell or command line, run:
-
-   ```python
-   import holoocean
-   holoocean.install("Ocean")
-   ```
-
-   Or:
-
-   ```bash
-   python -c "import holoocean; holoocean.install('Ocean')"
-   ```
-
-3. **Add World Files**
-
-   Place `OceanGym.json` and `OceanGym_sonar.json` into:
-
-   ```
-   C:\Users\Windows\AppData\Local\holoocean\2.0.0\worlds\Ocean
-   ```
-
-4. **Configure the Environment**
-
-   Edit `config.yaml` in  "\navigation\config.yaml" or select an existing config file. Set `base_path`, scenario parameters, etc.
-
-5. **Open the World**
-
-   1. First, open the project
-
-  <img src="asset\img\d1.jpg" alt="method" style="zoom: 50%;" />
-
-   1. Find the **HAIDI** map in **demo** directory
-
-  <img src="asset\img\d2.png" alt="method" style="zoom: 50%;" />
-
-   1. Run the project
-
-  <img src="asset\img\d3.png" alt="method" style="zoom: 50%;" />
-
-1. **Run a Task Script**
+**Step 1: Run a Task Script**
 
    For example, to run task 4:
 
@@ -115,7 +71,7 @@ OceanGym is based on [HoloOcean](https://github.com/byu-holoocean). Thanks for t
    Follow the keyboard instructions or switch to LLM mode for automatic decision-making.
 
 
-   **Keyboard Control Guide:**
+**Step 2: Keyboard Control Guide**
 
    | Key         | Action                        |
    |-------------|------------------------------|
@@ -133,11 +89,12 @@ OceanGym is based on [HoloOcean](https://github.com/byu-holoocean). Thanks for t
    > You can use WASD for movement, J/L for turning, I/K for up/down.
    > Press `M` to switch to large language model mode (may cause temporary lag).
    > Press `Q` to exit.
-7. **View Results**
+
+**Step 3: View Results**
 
    Logs and memory files are automatically saved in the `log/` and `memory/` directories.
 
-8. **Evaluate the results**
+**Step 4: Evaluate the results**
 
    Place the generated `memory` and `important_memory` files into the corresponding `point` folders.
    Then, set the evaluation paths in the `evaluate.py` file.
@@ -158,18 +115,18 @@ OceanGym is based on [HoloOcean](https://github.com/byu-holoocean). Thanks for t
    To run the evaluation:
 
    ```bash
-   python decision\utils\evaluate.py
+   python task\navigation\utils\evaluate.py
    ```
 
    The generated results will be saved under the `\eval\navigation` folder.
 
 ## Perception Task
 
-**Step 1**: Prepare the dataset
+**Step 1: Prepare the dataset**
 
 After downloading from [Hugging Face](https://huggingface.co/datasets/zjunlp/OceanGym), put it into the `data/perception` folder.
 
-**Step 2**: Select model parameters
+**Step 2: Select model parameters**
 
 | parameter | function |
 | ---| --- |
@@ -187,7 +144,7 @@ API_KEY="Yours"
 BASE_URL="Yours"
 ```
 
-**Step 3**: Run the experiments
+**Step 3: Run the experiments**
 
 | parameter | function |
 | ---| --- |
@@ -276,10 +233,37 @@ To do these steps in a single console command, use:
 python -c "import holoocean; holoocean.install('Ocean')"
 ```
 
+**Step 3: Add World Files**
+
+Place the JSON config file from `asset/decision/map_config` or `asset\perception\map_config` into some place like:
+
+(Windows)
+
+```
+C:\Users\Windows\AppData\Local\holoocean\2.0.0\worlds\Ocean
+```
+
+**Step 4: Open the World**
+
+1. If you're use it in first time, you have to compile it
+
+  1-1. find the Holodeck.uproject in **engine** folder
+
+  1-2. Right-click and select:Generate Visual Studio project files
+
+  1-3. If the version is not 5.3.2,please choose the Switch Unreal Engine Version
+
+  1-4. Then open the project
+
+2. Then find the **HAIDI** map in **demo** directory
+
+3. Run the project
 
 # 🧠 Decision Task
 
 > All commands are applicable to **Windows** only, because it requires full support from the `UE5 Engine`.
+
+The decision experiment can be run with reference to the [Quick Start](#️-quick-start).
 
 ## Target Object Locations
 
