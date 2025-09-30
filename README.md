@@ -2,13 +2,13 @@
 <h3 align="center"> A Benchmark Environment for Underwater Embodied Agents </h3>
 
 <p align="center">
-  🌐 <a href="https://123" target="_blank">Home Page</a>
+  🌐 <a href="https://oceangpt.github.io/OceanGym" target="_blank">Home Page</a>
   📄 <a href="https://arxiv.org/abs/123" target="_blank">ArXiv Paper</a>
   🤗 <a href="https://huggingface.co/datasets/zjunlp/OceanGym" target="_blank">Hugging Face</a>
-  ☁️ <a href="https://drive.google.com/drive/folders/1H7FTbtOCKTIEGp3R5RNsWvmxZ1oZxQih?usp=sharing" target="_blank">Google Drive</a>
+  ☁️ <a href="https://drive.google.com/drive/folders/1H7FTbtOCKTIEGp3R5RNsWvmxZ1oZxQih" target="_blank">Google Drive</a>
 </p>
 
-  <img src="asset\img\o1.png" align=center>
+  <img src="asset/img/o1.png" align=center>
 
 **OceanGym** is a high-fidelity embodied underwater environment that simulates a realistic ocean setting with diverse scenes. As illustrated in figure, OceanGym establishes a robust benchmark for evaluating autonomous agents through a series of challenging tasks, encompassing various perception analyses and decision-making navigation. The platform facilitates these evaluations by supporting multi-modal perception and providing action spaces for continuous control.
 
@@ -128,9 +128,11 @@ pip install -r requirements.txt
 
 ## Perception Task
 
+> All commands are applicable to **Linux**, so if you using **Windows**, you need to change the corresponding path representation (especially the slash).
+
 **Step 1: Prepare the dataset**
 
-After downloading from [Hugging Face](https://huggingface.co/datasets/zjunlp/OceanGym/tree/main/data/perception), and put it into the `data/perception` folder.
+After downloading from [Hugging Face](https://huggingface.co/datasets/zjunlp/OceanGym/tree/main/data/perception) or [Google Drive](https://drive.google.com/drive/folders/1H7FTbtOCKTIEGp3R5RNsWvmxZ1oZxQih), put it into the `data/perception` folder.
 
 **Step 2: Select model parameters**
 
@@ -253,29 +255,35 @@ C:\Users\Windows\AppData\Local\holoocean\2.0.0\worlds\Ocean
 
 **1. If you're use it in first time, you have to compile it**
 
-  1-1. find the Holodeck.uproject in **engine** folder \
-  <img src="asset\img\pic1.png" style="width: 60%; height: auto;" align="center">
+  1-1. find the Holodeck.uproject in **engine** folder
+  
+    <img src="asset/img/pic1.png" style="width: 60%; height: auto;" align="center">
 
-  1-2. Right-click and select:Generate Visual Studio project files \
-    <img src="asset\img\pic2.png" style="width: 60%; height: auto;" align="center">
+  1-2. Right-click and select:Generate Visual Studio project files
+  
+    <img src="asset/img/pic2.png" style="width: 60%; height: auto;" align="center">
 
-  1-3. If the version is not 5.3.2,please choose the Switch Unreal Engine Version \
-    <img src="asset\img\pic3.png" style="width: 60%; height: auto;" align="center">
+  1-3. If the version is not 5.3.2,please choose the Switch Unreal Engine Version
+  
+    <img src="asset/img/pic3.png" style="width: 60%; height: auto;" align="center">
 
-  1-4. Then open the project \
-    <img src="asset\img\pic4.png" style="width: 60%; height: auto;" align="center">
+  1-4. Then open the project
+  
+    <img src="asset/img/pic4.png" style="width: 60%; height: auto;" align="center">
 
-**2. Then find the `HAIDI` map in `demo` directory** \
-    <img src="asset\img\pic5.png" style="width: 60%; height: auto;" align="center">
+**2. Then find the `HAIDI` map in `demo` directory**
 
-**3. Run the project** \
-    <img src="asset\img\pic6.png" style="width: 60%; height: auto;" align="center">
+    <img src="asset/img/pic5.png" style="width: 60%; height: auto;" align="center">
+
+**3. Run the project**
+
+    <img src="asset/img/pic6.png" style="width: 60%; height: auto;" align="center">
 
 # 🧠 Decision Task
 
 > All commands are applicable to **Windows** only, because it requires full support from the `UE5 Engine`.
 
-The decision experiment can be run with reference to the [Quick Start](#️-quick-start).
+The decision experiment can be run with reference to the [Quick Start](#-quick-start).
 
 ## Target Object Locations
 
@@ -325,7 +333,7 @@ The following are the coordinates for each target object in the environment (in 
 
 ### Import Data
 
-First, you need download our data from [Hugging Face](https://huggingface.co/datasets/zjunlp/OceanGym).
+First, you need download our data from [Hugging Face](https://huggingface.co/datasets/zjunlp/OceanGym) or [Google Drive](https://drive.google.com/drive/folders/1H7FTbtOCKTIEGp3R5RNsWvmxZ1oZxQih).
 
 And then create a new `data` folder in the project root directory:
 
@@ -576,13 +584,13 @@ python perception/task/init_map_with_sonar.py \
 
 ## Decision Task
 
-  <img src="asset\img\t1.png" align=center>
+  <img src="asset/img/t1.png" align=center>
 
 - This table is the performance in decision tasks requiring autonomous completion by MLLM-driven agents.
 
 ## Perception Task
 
-  <img src="asset\img\t2.png" align=center>
+  <img src="asset/img/t2.png" align=center>
 
 - This table is the performance of perception tasks across different models and conditions.
 - Values represent accuracy percentages.
@@ -596,32 +604,6 @@ If this OceanGym paper or benchmark is helpful, please kindly cite as this:
 @inproceedings{xxx,
   title={OceanGym: A Benchmark Environment for Underwater Embodied Agents},
   ...
-}
-```
-
-General HoloOcean use:
-
-```bibtex
-@inproceedings{Potokar22icra,
-   author = {E. Potokar and S. Ashford and M. Kaess and J. Mangelson},
-   title = {Holo{O}cean: An Underwater Robotics Simulator},
-   booktitle = {Proc. IEEE Intl. Conf. on Robotics and Automation, ICRA},
-   address = {Philadelphia, PA, USA},
-   month = may,
-   year = {2022}
-}
-```
-
-Simulation of Sonar (Imaging, Profiling, Sidescan) sensors:
-
-```bibtex
-@inproceedings{Potokar22iros,
-   author = {E. Potokar and K. Lay and K. Norman and D. Benham and T. Neilsen and M. Kaess and J. Mangelson},
-   title = {Holo{O}cean: Realistic Sonar Simulation},
-   booktitle = {Proc. IEEE/RSJ Intl. Conf. Intelligent Robots and Systems, IROS},
-   address = {Kyoto, Japan},
-   month = {Oct},
-   year = {2022}
 }
 ```
 
