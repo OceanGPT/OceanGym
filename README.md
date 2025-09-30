@@ -12,13 +12,23 @@
 
 **OceanGym** is a high-fidelity embodied underwater environment that simulates a realistic ocean setting with diverse scenes. As illustrated in figure, OceanGym establishes a robust benchmark for evaluating autonomous agents through a series of challenging tasks, encompassing various perception analyses and decision-making navigation. The platform facilitates these evaluations by supporting multi-modal perception and providing action spaces for continuous control.
 
+# 💐 Acknowledgement
+
+OceanGym environment is based on Unreal Engine (UE) 5.3.
+
+Partial functions of OceanGym is developed on [HoloOcean](https://github.com/byu-holoocean).
+
+Thanks for their great contributions!
+
 # 🔔 News
 
 - 09-2025, we launched the OceanGym project.
 - 08-2025, we finshed the OceanGym environment.
+
 ---
 
 **Contents:**
+- [💐 Acknowledgement](#-acknowledgement)
 - [🔔 News](#-news)
 - [📺 Quick Start](#-quick-start)
   - [Decision Task](#decision-task)
@@ -42,10 +52,9 @@
     - [Modify Configuration File](#modify-configuration-file)
     - [Collect Camera Images Only](#collect-camera-images-only)
     - [Collect Camera and Sonar Images](#collect-camera-and-sonar-images)
-- [🎖️ Results](#️-results)
+- [⏱️ Results](#️-results)
   - [Decision Task](#decision-task-1)
   - [Perception Task](#perception-task-1)
-- [💐 Acknowledgement](#-acknowledgement)
 - [🚩 Citation](#-citation)
 
 # 📺 Quick Start
@@ -124,7 +133,7 @@ pip install -r requirements.txt
 
 **Step 1: Prepare the dataset**
 
-After downloading from [Hugging Face](https://huggingface.co/datasets/zjunlp/OceanGym), put it into the `data/perception` folder.
+After downloading from [Hugging Face](https://huggingface.co/datasets/zjunlp/OceanGym/tree/main/data/perception), and put it into the `data/perception` folder.
 
 **Step 2: Select model parameters**
 
@@ -258,7 +267,7 @@ C:\Users\Windows\AppData\Local\holoocean\2.0.0\worlds\Ocean
 
   1-4. Then open the project \
     <img src="asset\img\pic4.png" style="width: 60%; height: auto;" align="center">
-  
+
 **2. Then find the `HAIDI` map in `demo` directory** \
     <img src="asset\img\pic5.png" style="width: 60%; height: auto;" align="center">
 
@@ -331,7 +340,7 @@ Finally, put the downloaded data into the corresponding folder.
 
 ### Set your Model Parameters
 
-Open a terminal in the root directory and set it directly, or use the script from [here](scripts/perception/eval.sh).
+Just open a terminal in the root directory and set it directly.
 
 | parameter | function |
 | ---| --- |
@@ -566,28 +575,21 @@ python perception/task/init_map_with_sonar.py \
     --rgbcamera "FrontCamera"
 ```
 
-# 🎖️ Results
+# ⏱️ Results
 
 ## Decision Task
 
   <img src="asset\img\t1.png" align=center>
 
-This table is the performance in decision tasks requiring autonomous completion by MLLM-driven agents.
+- This table is the performance in decision tasks requiring autonomous completion by MLLM-driven agents.
 
 ## Perception Task
 
   <img src="asset\img\t2.png" align=center>
 
-This table is the performance of perception tasks across different models and conditions. Values represent
-accuracy percentages (%). Adding sonar means using both RGB and sonar images.
-
-# 💐 Acknowledgement
-
-OceanGym environment is based on Unreal Engine (UE) 5.3.
-
-Partial functions of OceanGym is developed on [HoloOcean](https://github.com/byu-holoocean).
-
-Thanks for their great contributions!
+- This table is the performance of perception tasks across different models and conditions.
+- Values represent accuracy percentages.
+- Adding sonar means using both RGB and sonar images.
 
 # 🚩 Citation
 
@@ -626,4 +628,4 @@ Simulation of Sonar (Imaging, Profiling, Sidescan) sensors:
 }
 ```
 
-💐 Thanks!
+💐 Thanks again!
