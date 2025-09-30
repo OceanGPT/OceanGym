@@ -584,7 +584,8 @@ accuracy percentages (%). Adding sonar means using both RGB and sonar images.
 # 💐 Acknowledgement
 
 OceanGym environment is based on Unreal Engine (UE) 5.3.
-Partial functions of OceanGym is developed on[HoloOcean](https://github.com/byu-holoocean).
+
+Partial functions of OceanGym is developed on [HoloOcean](https://github.com/byu-holoocean).
 
 Thanks for their great contributions!
 
