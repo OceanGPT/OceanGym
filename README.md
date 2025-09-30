@@ -19,8 +19,8 @@ OceanGym environment is built upon Unreal Engine (UE) 5.3, with certain componen
 
 # 🔔 News
 
-- 09-2025, we launched the OceanGym project.
-- 08-2025, we finshed the OceanGym environment.
+- 10-2025, we released the initial version of OceanGym along with the accompanying [paper]().
+- 04-2025, we launched the OceanGym project.
 
 ---
 
