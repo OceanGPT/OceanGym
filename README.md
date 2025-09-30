@@ -12,18 +12,13 @@
 
 **OceanGym** is a high-fidelity embodied underwater environment that simulates a realistic ocean setting with diverse scenes. As illustrated in figure, OceanGym establishes a robust benchmark for evaluating autonomous agents through a series of challenging tasks, encompassing various perception analyses and decision-making navigation. The platform facilitates these evaluations by supporting multi-modal perception and providing action spaces for continuous control.
 
-# 💐 Acknowledgement
-
-OceanGym is based on [HoloOcean](https://github.com/byu-holoocean). Thanks for their great contributions!
-
 # 🔔 News
 
-- 09-2025, we launch the OceanGym project.
-
+- 09-2025, we launched the OceanGym project.
+- 08-2025, we finshed the OceanGym environment.
 ---
 
 **Contents:**
-- [💐 Acknowledgement](#-acknowledgement)
 - [🔔 News](#-news)
 - [📺 Quick Start](#-quick-start)
   - [Decision Task](#decision-task)
@@ -50,6 +45,7 @@ OceanGym is based on [HoloOcean](https://github.com/byu-holoocean). Thanks for t
 - [🎖️ Results](#️-results)
   - [Decision Task](#decision-task-1)
   - [Perception Task](#perception-task-1)
+- [💐 Acknowledgement](#-acknowledgement)
 - [🚩 Citation](#-citation)
 
 # 📺 Quick Start
@@ -584,6 +580,13 @@ This table is the performance in decision tasks requiring autonomous completion 
 
 This table is the performance of perception tasks across different models and conditions. Values represent
 accuracy percentages (%). Adding sonar means using both RGB and sonar images.
+
+# 💐 Acknowledgement
+
+OceanGym environment is based on Unreal Engine (UE) 5.3.
+Partial functions of OceanGym is developed on[HoloOcean](https://github.com/byu-holoocean).
+
+Thanks for their great contributions!
 
 # 🚩 Citation
 
