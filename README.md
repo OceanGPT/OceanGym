@@ -25,10 +25,14 @@ OceanGym is based on [HoloOcean](https://github.com/byu-holoocean). Thanks for t
 **Contents:**
 - [💐 Acknowledgement](#-acknowledgement)
 - [🔔 News](#-news)
-- [▶️ Quick Start](#️-quick-start)
+- [📺 Quick Start](#-quick-start)
   - [Decision Task](#decision-task)
   - [Perception Task](#perception-task)
 - [⚙️ Set up Environment](#️-set-up-environment)
+  - [Clone HoloOcean](#clone-holoocean)
+  - [Packaged Installation](#packaged-installation)
+  - [Add World Files](#add-world-files)
+  - [Open the World](#open-the-world)
 - [🧠 Decision Task](#-decision-task)
   - [Target Object Locations](#target-object-locations)
   - [Evaluation Criteria](#evaluation-criteria)
@@ -48,7 +52,7 @@ OceanGym is based on [HoloOcean](https://github.com/byu-holoocean). Thanks for t
   - [Perception Task](#perception-task-1)
 - [🚩 Citation](#-citation)
 
-# ▶️ Quick Start
+# 📺 Quick Start
 
 Install the experimental code environment using pip:
 
@@ -183,7 +187,7 @@ This project is based on the HoloOcean environment. 💐
 > We have placed a simplified version here. If you encounter any detailed issues, please refer to the [original installation document](https://byu-holoocean.github.io/holoocean-docs/v2.1.0/usage/installation.html).
 
 
-**Step 1: Clone HoloOcean**
+## Clone HoloOcean
 
 Make sure your GitHub account is linked to an **Epic Games** account, please Follow the steps [here](https://www.unrealengine.com/en-US/ue-on-github) and remember to accept the email invitation from Epic Games.
 
@@ -193,7 +197,7 @@ After that clone HoloOcean:
 git clone git@github.com:byu-holoocean/HoloOcean.git holoocean
 ```
 
-**Step 2: Packaged Installation**
+## Packaged Installation
 
 1. Additional Requirements
 
@@ -233,7 +237,7 @@ To do these steps in a single console command, use:
 python -c "import holoocean; holoocean.install('Ocean')"
 ```
 
-**Step 3: Add World Files**
+## Add World Files
 
 Place the JSON config file from `asset/decision/map_config` or `asset\perception\map_config` into some place like:
 
@@ -243,9 +247,9 @@ Place the JSON config file from `asset/decision/map_config` or `asset\perception
 C:\Users\Windows\AppData\Local\holoocean\2.0.0\worlds\Ocean
 ```
 
-**Step 4: Open the World**
+## Open the World
 
-1. If you're use it in first time, you have to compile it
+**1. If you're use it in first time, you have to compile it**
 
   1-1. find the Holodeck.uproject in **engine** folder
 
@@ -255,9 +259,11 @@ C:\Users\Windows\AppData\Local\holoocean\2.0.0\worlds\Ocean
 
   1-4. Then open the project
 
-2. Then find the **HAIDI** map in **demo** directory
+**2. Then find the `HAIDI` map in `demo` directory**
 
-3. Run the project
+**3. Run the project**
+
+![../_images/standalone-game.png](https://byu-holoocean.github.io/holoocean-docs/v2.0.1/_images/standalone-game.png)
 
 # 🧠 Decision Task
 
