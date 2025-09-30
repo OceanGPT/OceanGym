@@ -36,6 +36,8 @@
     - [Collect Camera Images Only](#collect-camera-images-only)
     - [Collect Camera and Sonar Images](#collect-camera-and-sonar-images)
 - [🎖️ Results](#️-results)
+  - [Decision Task](#decision-task-1)
+  - [Perception Task](#perception-task-1)
 - [🚩 Citation](#-citation)
 
 # 💐 Acknowledgement
@@ -576,7 +578,18 @@ python perception/task/init_map_with_sonar.py \
 
 # 🎖️ Results
 
-~
+## Decision Task
+
+  <img src="asset\img\t1.png" align=center>
+
+This table is the performance in decision tasks requiring autonomous completion by MLLM-driven agents.
+
+## Perception Task
+
+  <img src="asset\img\t2.png" align=center>
+
+This table is the performance of perception tasks across different models and conditions. Values represent
+accuracy percentages (%). Adding sonar means using both RGB and sonar images.
 
 # 🚩 Citation
 
