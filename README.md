@@ -4,11 +4,11 @@
 <p align="center">
   🌐 <a href="https://123" target="_blank">Home Page</a>
   📄 <a href="https://arxiv.org/abs/123" target="_blank">ArXiv Paper</a>
-  🤗 <a href="https://huggingface.co/123" target="_blank">Hugging Face</a>
-  ☁️ <a href="https://123" target="_blank">Google Drive</a>
+  🤗 <a href="https://huggingface.co/datasets/zjunlp/OceanGym" target="_blank">Hugging Face</a>
+  ☁️ <a href="https://drive.google.com/drive/folders/1VhrvhvbWvnaS4EyeyaV1fmTQ6gPo8GCN?usp=sharing" target="_blank">Google Drive</a>
 </p>
 
-  <img src="asset\img\p1.png" align=center>
+  <img src="asset\img\o1.png" align=center>
 
 **OceanGym** is a high-fidelity embodied underwater environment that simulates a realistic ocean setting with diverse scenes. As illustrated in figure, OceanGym establishes a robust benchmark for evaluating autonomous agents through a series of challenging tasks, encompassing various perception analyses and decision-making navigation. The platform facilitates these evaluations by supporting multi-modal perception and providing action spaces for continuous control.
 
@@ -92,15 +92,15 @@ OceanGym is based on [HoloOcean](https://github.com/byu-holoocean). Thanks for t
 
    1. First, open the project
 
-  <img src="asset\img\a1.png" alt="method" style="zoom: 50%;" />
+  <img src="asset\img\d1.jpg" alt="method" style="zoom: 50%;" />
 
-   2. Find the **HAIDI** map in **demo** directory
+   1. Find the **HAIDI** map in **demo** directory
 
-  <img src="asset\img\a2.jpg" alt="method" style="zoom: 50%;" />
+  <img src="asset\img\d2.png" alt="method" style="zoom: 50%;" />
 
    1. Run the project
 
-  <img src="asset\img\a3.png" alt="method" style="zoom: 50%;" />
+  <img src="asset\img\d3.png" alt="method" style="zoom: 50%;" />
 
 1. **Run a Task Script**
 
