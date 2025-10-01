@@ -53,6 +53,7 @@ OceanGym environment is built upon Unreal Engine (UE) 5.3, with certain componen
 - [⏱️ Results](#️-results)
   - [Decision Task](#decision-task-1)
   - [Perception Task](#perception-task-1)
+- [📚 Datasets](#-datasets)
 - [🚩 Citation](#-citation)
 
 # 📺 Quick Start
@@ -597,7 +598,7 @@ python perception/task/init_map_with_sonar.py \
 - Values represent accuracy percentages.
 - Adding sonar means using both RGB and sonar images.
 
-# DataSet
+# 📚 DataSets
 **The link to the dataset is as follows**\
  ☁️ <a href="https://drive.google.com/drive/folders/1VhrvhvbWvnaS4EyeyaV1fmTQ6gPo8GCN?usp=drive_link" target="_blank">Google Drive</a>
 - Decision Task
