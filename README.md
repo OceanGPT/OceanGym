@@ -634,14 +634,14 @@ decision_dataset
 - Perception Task
 
 ```python
-perception_dataset/
+perception_dataset
 ├── data
 │ ├── highLight
 │ ├── highLightContext
 │ ├── lowLight
 │ ├── lowLightContext
 │
-└── result/
+└── result
 
 ```
 
