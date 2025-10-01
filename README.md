@@ -632,7 +632,7 @@ decision_dataset
 
 - Perception Task
 
-- ```python
+```python
 perception_dataset/
 ├── data
 │ ├── highLight
@@ -643,6 +643,7 @@ perception_dataset/
 └── result/
 
 ```
+
 # 🚩 Citation
 
 If this OceanGym paper or benchmark is helpful, please kindly cite as this:
