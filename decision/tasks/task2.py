@@ -33,7 +33,7 @@ config = load_config()
 
 # Get base and task paths from config
 base_path = config["global"]["base_path"]
-task_path = os.path.join(base_path, "task", "decision")
+task_path = os.path.join(base_path, "decision")
 
 # Define prompt and log/memory file paths
 prompt_file = os.path.join(task_path, "prompt", "task2.py")
