@@ -597,6 +597,40 @@ python perception/task/init_map_with_sonar.py \
 - Values represent accuracy percentages.
 - Adding sonar means using both RGB and sonar images.
 
+# DataSet
+**The link to the dataset is as follows**\
+ ☁️ <a href="https://drive.google.com/drive/folders/1VhrvhvbWvnaS4EyeyaV1fmTQ6gPo8GCN?usp=drive_link" target="_blank">Google Drive</a>
+
+```python
+decision/
+├── main/
+│ ├── gpt4omini/
+│ │ ├── task1/
+│ │ │ ├── point1/
+│ │ │ │ ├── llm_output_...log
+│ │ │ │ ├── memory_...json
+│ │ │ │ └── important_memory_...json
+│ │ │ └── ... (other data points like point2, point3...)
+│ │ └── ... (other tasks like task2, task3...)
+│ ├── gemini/
+│ │ └── ... (structure is the same as gpt4omini)
+│ └── qwen/
+│ └── ... (structure is the same as gpt4omini)
+│
+├── migration/
+│ ├── gpt4o/
+│ │ └── ... (structure is the same as above)
+│ └── qwen/
+│ └── ... (structure is the same as above)
+│
+└── scale/
+└── qwen/
+└── gpt4omini/
+```
+# decision/ Directory Structure
+
+
+- Perception Task
 # 🚩 Citation
 
 If this OceanGym paper or benchmark is helpful, please kindly cite as this:
