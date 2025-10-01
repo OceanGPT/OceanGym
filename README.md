@@ -603,34 +603,46 @@ python perception/task/init_map_with_sonar.py \
 - Decision Task
 
 ```python
-decision/
-├── main/
-│ ├── gpt4omini/
-│ │ ├── task1/
-│ │ │ ├── point1/
+decision_dataset
+├── main
+│ ├── gpt4omini
+│ │ ├── task1
+│ │ │ ├── point1
 │ │ │ │ ├── llm_output_...log
 │ │ │ │ ├── memory_...json
 │ │ │ │ └── important_memory_...json
 │ │ │ └── ... (other data points like point2, point3...)
 │ │ └── ... (other tasks like task2, task3...)
-│ ├── gemini/
+│ ├── gemini
 │ │ └── ... (structure is the same as gpt4omini)
-│ └── qwen/
+│ └── qwen
 │ └── ... (structure is the same as gpt4omini)
 │
-├── migration/
-│ ├── gpt4o/
+├── migration
+│ ├── gpt4o
 │ │ └── ... (structure is the same as above)
-│ └── qwen/
+│ └── qwen
 │ └── ... (structure is the same as above)
 │
-└── scale/
-└── qwen/
-└── gpt4omini/
+└── scale
+  ├── qwen
+  └── gpt4omini
 ```
 
 
 - Perception Task
+
+- ```python
+perception_dataset/
+├── data
+│ ├── highLight
+│ ├── highLightContext
+│ ├── lowLight
+│ ├── lowLightContext
+│
+└── result/
+
+```
 # 🚩 Citation
 
 If this OceanGym paper or benchmark is helpful, please kindly cite as this:
