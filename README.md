@@ -3,7 +3,7 @@
 
 <p align="center">
   🌐 <a href="https://oceangpt.github.io/OceanGym" target="_blank">Home Page</a>
-  📄 <a href="https://arxiv.org/abs/123" target="_blank">ArXiv Paper</a>
+  📄 <a href="https://arxiv.org/abs/2509.26536" target="_blank">ArXiv Paper</a>
   🤗 <a href="https://huggingface.co/datasets/zjunlp/OceanGym" target="_blank">Hugging Face</a>
   ☁️ <a href="https://drive.google.com/drive/folders/1H7FTbtOCKTIEGp3R5RNsWvmxZ1oZxQih" target="_blank">Google Drive</a>
 </p>
@@ -19,7 +19,7 @@ OceanGym environment is built upon Unreal Engine (UE) 5.3, with certain componen
 
 # 🔔 News
 
-- 10-2025, we released the initial version of OceanGym along with the accompanying [paper]().
+- 10-2025, we released the initial version of OceanGym along with the accompanying [paper](https://arxiv.org/abs/2509.26536).
 - 04-2025, we launched the OceanGym project.
 
 ---
@@ -287,7 +287,7 @@ The decision experiment can be run with reference to the [Quick Start](#-quick-s
 
 ## Target Object Locations
 
-We have provided eight tasks. For specific task descriptions, please refer to the paper.
+We have provided eight tasks. For specific task descriptions, please refer to the [paper](https://arxiv.org/abs/2509.26536).
 
 The following are the coordinates for each target object in the environment (in meters):
 
@@ -601,9 +601,14 @@ python perception/task/init_map_with_sonar.py \
 If this OceanGym paper or benchmark is helpful, please kindly cite as this:
 
 ```bibtex
-@inproceedings{xxx,
-  title={OceanGym: A Benchmark Environment for Underwater Embodied Agents},
-  ...
+@misc{xue2025oceangymbenchmarkenvironmentunderwater,
+      title={OceanGym: A Benchmark Environment for Underwater Embodied Agents}, 
+      author={Yida Xue and Mingjun Mao and Xiangyuan Ru and Yuqi Zhu and Baochang Ren and Shuofei Qiao and Mengru Wang and Shumin Deng and Xinyu An and Ningyu Zhang and Ying Chen and Huajun Chen},
+      year={2025},
+      eprint={2509.26536},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2509.26536}, 
 }
 ```
 
