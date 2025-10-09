@@ -5,7 +5,7 @@
   🌐 <a href="https://oceangpt.github.io/OceanGym" target="_blank">Home Page</a>
   📄 <a href="https://arxiv.org/abs/2509.26536" target="_blank">ArXiv Paper</a>
   🤗 <a href="https://huggingface.co/datasets/zjunlp/OceanGym" target="_blank">Hugging Face</a>
-  ☁️ <a href="https://drive.google.com/file/d/1KtuAYZZPEgdh1FK5HwsbUtp5_3c9uqOl/view?usp=drive_link" target="_blank">Google Drive</a>
+  ☁️ <a href="https://drive.google.com/file/d/1EfKHeiyQD5eoJ6-EsiJHuIdBRM5Ope5A/view?usp=drive_link" target="_blank">Google Drive</a>
   ☁️ <a href="https://pan.baidu.com/s/16h86huHLeFGAKatRWvLrFQ?pwd=wput" target="_blank">Baidu Drive</a>
 </p>
 
