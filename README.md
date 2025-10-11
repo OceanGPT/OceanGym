@@ -673,7 +673,12 @@ Choose the details of **DirectionalLight**
 
 Step 3:
 Modify the data of **light** as per your requirements
+
  <img src="asset/img/pic9.png" align=center>
+
+**Notice**\
+In our paper, we simulate low-light and high-light environments, where the Intensity of light is **10.0lux** in the **high-light** environment
+Intensity of light is **1.5lux** in a **low-light** environment
 
 # 🚩 Citation
 
