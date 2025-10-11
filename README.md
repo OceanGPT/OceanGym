@@ -658,6 +658,13 @@ perception_dataset
 
 ```
 
+# 🔧 Develop OceanGym
+OceanGym supports custom scenarios. You can freely exert yourself in the scenarios we provide!\
+You can find the assets you need in the **ue5 fab Mall** and add them to OceanGym to test the exploration ability of the robot!\
+Or modify parameters such as **terrain and lighting** to simulate the weather in different scenarios!\
+The following is an example of setting up lighting:\
+
+
 # 🚩 Citation
 
 If this OceanGym paper or benchmark is helpful, please kindly cite as this:
