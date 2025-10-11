@@ -276,6 +276,7 @@ C:\Users\Windows\AppData\Local\holoocean\2.0.0\worlds\Ocean
   <img src="asset/img/pic6.png" style="width: 60%; height: auto;" align="center">
 
 **4. Run the code**
+
  When the ue editor shows as follows, namely: **"LogD3D12RHI: Cannot end block when stack is empty"** , it indicates that the scene has been loaded. 
  
   <img src="asset/img/pic7.png" style="width: 60%; height: auto;" align="center">
