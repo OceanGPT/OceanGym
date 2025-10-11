@@ -224,12 +224,6 @@ pip install .
 
 3. Worlds Packages
 
-To install the most recent version of the Ocean worlds package, open a Python shell by typing the following and hit enter:
-
-```bash
-python
-```
-
 Install the package by running the following Python commands:
 
 ```python
