@@ -663,7 +663,8 @@ perception_dataset
 OceanGym supports custom scenarios. You can freely exert yourself in the scenarios we provide!\
 You can find the assets you need in the **ue5 fab Mall** and add them to OceanGym to test the exploration ability of the robot!\
 Or modify parameters such as **terrain and lighting** to simulate the weather in different scenarios!\
-The following is an example of setting up lighting:
+
+### Modify lighting
 
 Step 1:
 Find the **DirectionalLight** in outliner
@@ -674,11 +675,24 @@ Choose the details of **DirectionalLight**
 Step 3:
 Modify the data of **light** as per your requirements
 
- <img src="asset/img/pic9.png" align=center>
+ <img src="asset/img/pic9.png" style="width: 60%; height: auto;" align="center">
 
 **Notice**\
 In our paper, we simulate low-light and high-light environments, where the Intensity of light is **10.0lux** in the **high-light** environment
 Intensity of light is **1.5lux** in a **low-light** environment
+
+### Modify start position
+Step 1:
+Find the initial config file **OceanGym.json** in
+```
+C:\Users\Windows\AppData\Local\holoocean\2.0.0\worlds\Ocean
+```
+Step 2:
+Modify the data of **location** as per your requirements
+
+ <img src="asset/img/pic10.png" style="width: 60%; height: auto;" align="center">
+
+ If you want to develop more functions, you can visit [the official website of holoocean](https://byu-holoocean.github.io/holoocean-docs/v2.0.1/develop/develop.html)
 
 # 🚩 Citation
 
