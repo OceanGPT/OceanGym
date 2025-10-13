@@ -193,16 +193,13 @@ This project is based on the HoloOcean environment. 💐
 > We have placed a simplified version here. If you encounter any detailed issues, please refer to the [original installation document](https://byu-holoocean.github.io/holoocean-docs/v2.1.0/usage/installation.html).
 
 
-## Clone HoloOcean
+## Install the OceanGym_large.zip 
 
-Make sure your GitHub account is linked to an **Epic Games** account, please Follow the steps [here](https://www.unrealengine.com/en-US/ue-on-github) and remember to accept the email invitation from Epic Games.
-
-After that clone HoloOcean:
-
-```bash
-git clone git@github.com:byu-holoocean/HoloOcean.git holoocean
-```
-
+From 
+  ☁️ <a href="https://drive.google.com/file/d/1EfKHeiyQD5eoJ6-EsiJHuIdBRM5Ope5A/view?usp=drive_link" target="_blank">Google Drive</a>
+  ☁️ <a href="https://pan.baidu.com/s/16h86huHLeFGAKatRWvLrFQ?pwd=wput" target="_blank">Baidu Drive</a>
+  download **the OceanGym_large.zip** And extract it to the folder you want
+  
 ## Packaged Installation
 
 1. Additional Requirements
