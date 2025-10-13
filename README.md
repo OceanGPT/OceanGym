@@ -198,7 +198,7 @@ This project is based on the HoloOcean environment. 💐
 From 
   ☁️ <a href="https://drive.google.com/file/d/1EfKHeiyQD5eoJ6-EsiJHuIdBRM5Ope5A/view?usp=drive_link" target="_blank">Google Drive</a>
   ☁️ <a href="https://pan.baidu.com/s/16h86huHLeFGAKatRWvLrFQ?pwd=wput" target="_blank">Baidu Drive</a>
-  download **the OceanGym_large.zip** And extract it to the folder you want
+  download the **OceanGym_large.zip** And extract it to the folder you want
   
 ## Packaged Installation
 
