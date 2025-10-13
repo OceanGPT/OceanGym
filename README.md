@@ -202,15 +202,7 @@ From
   
 ## Packaged Installation
 
-1. Additional Requirements
-
-For the build-essential package for Linux, you can run the following console command:
-
-```bash
-sudo apt install build-essential
-```
-
-2. Python Library
+1. Python Library
 
 From the cloned repository, install the Python package by doing the following:
 
@@ -219,7 +211,7 @@ cd OceanGym_large/client
 pip install .
 ```
 
-3. Worlds Packages
+2. Worlds Packages
 
 Install the package by running the following Python commands:
 
