@@ -215,7 +215,7 @@ sudo apt install build-essential
 From the cloned repository, install the Python package by doing the following:
 
 ```bash
-cd holoocean/client
+cd OceanGym_large/client
 pip install .
 ```
 
