@@ -13,6 +13,8 @@
 
 **OceanGym** is a high-fidelity embodied underwater environment that simulates a realistic ocean setting with diverse scenes. As illustrated in figure, OceanGym establishes a robust benchmark for evaluating autonomous agents through a series of challenging tasks, encompassing various perception analyses and decision-making navigation. The platform facilitates these evaluations by supporting multi-modal perception and providing action spaces for continuous control.
 
+> We have provided a teaching demonstration video here:[bilibili](https://www.bilibili.com/video/BV1vu4QzpEzQ/?vd_source=320a580e2cf65df21924b079ad11371c)
+
 # 💐 Acknowledgement
 
 OceanGym environment is built upon Unreal Engine (UE) 5.3, with certain components developed by drawing inspiration from and partially based on [HoloOcean](https://github.com/byu-holoocean). We sincerely acknowledge their valuable contribution.
