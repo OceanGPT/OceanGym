@@ -192,6 +192,7 @@ This project is based on the HoloOcean environment. 💐
 
 > We have placed a simplified version here. If you encounter any detailed issues, please refer to the [original installation document](https://byu-holoocean.github.io/holoocean-docs/v2.1.0/usage/installation.html).
 
+> We have provided a teaching demonstration video here:[bilibili](https://www.bilibili.com/video/BV1vu4QzpEzQ/?vd_source=320a580e2cf65df21924b079ad11371c)
 
 ## Install the OceanGym_large.zip 
 
