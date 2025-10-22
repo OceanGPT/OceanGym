@@ -1,4 +1,4 @@
-<img width="492" height="492" alt="image" src="https://github.com/user-attachments/assets/d41de5f2-69f8-4f00-8d6f-78aefb74d32e" /><h1 align="center"> 🌊 OceanGym 🦾 </h1>
+<h1 align="center"> 🌊 OceanGym 🦾 </h1>
 <h3 align="center"> A Benchmark Environment for Underwater Embodied Agents </h3>
 
 <p align="center">
