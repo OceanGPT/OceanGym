@@ -9,7 +9,7 @@
   ☁️ <a href="https://pan.baidu.com/s/16h86huHLeFGAKatRWvLrFQ?pwd=wput" target="_blank">Baidu Drive</a>
 </p>
 
-  <img src="asset/img/o1.png" style="width:120%; height: auto;" align=center>
+  <img src="asset/img/o1.png" style="width:100%; height: auto;" align=center>
 
 **OceanGym** is a high-fidelity embodied underwater environment that simulates a realistic ocean setting with diverse scenes. As illustrated in figure, OceanGym establishes a robust benchmark for evaluating autonomous agents through a series of challenging tasks, encompassing various perception analyses and decision-making navigation. The platform facilitates these evaluations by supporting multi-modal perception and providing action spaces for continuous control.
 
