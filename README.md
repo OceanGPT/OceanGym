@@ -720,12 +720,4 @@ If this OceanGym paper or benchmark is helpful, please kindly cite as this:
    month = {Oct},
    year = {2022}
 }
-@misc{romrell2025previewholoocean20,
-   title={A Preview of HoloOcean 2.0},
-   author={Blake Romrell and Abigail Austin and Braden Meyers and Ryan Anderson and Carter Noh and Joshua G. Mangelson},
-   year={2025},
-   eprint={2510.06160},
-   archivePrefix={arXiv},
-   primaryClass={cs.RO},
-   url={https://arxiv.org/abs/2510.06160},
 ```
