@@ -711,3 +711,21 @@ If this OceanGym paper or benchmark is helpful, please kindly cite as this:
 ```
 
 💐 Thanks again!
+```bibtex
+@inproceedings{Potokar22iros,
+   author = {E. Potokar and K. Lay and K. Norman and D. Benham and T. Neilsen and M. Kaess and J. Mangelson},
+   title = {Holo{O}cean: Realistic Sonar Simulation},
+   booktitle = {Proc. IEEE/RSJ Intl. Conf. Intelligent Robots and Systems, IROS},
+   address = {Kyoto, Japan},
+   month = {Oct},
+   year = {2022}
+}
+@misc{romrell2025previewholoocean20,
+   title={A Preview of HoloOcean 2.0},
+   author={Blake Romrell and Abigail Austin and Braden Meyers and Ryan Anderson and Carter Noh and Joshua G. Mangelson},
+   year={2025},
+   eprint={2510.06160},
+   archivePrefix={arXiv},
+   primaryClass={cs.RO},
+   url={https://arxiv.org/abs/2510.06160},
+```
