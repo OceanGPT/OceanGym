@@ -1,4 +1,4 @@
-<h1 align="center"> 🌊 OceanGym 🦾 </h1>
+<h1 align="center">  <img src="asset/img/OceanGym_logo.png" style="width:5%; height: auto;" align=center> OceanGym  </h1>
 <h3 align="center"> A Benchmark Environment for Underwater Embodied Agents </h3>
 
 <p align="center">
