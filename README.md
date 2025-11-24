@@ -13,6 +13,10 @@
 
 **OceanGym** is a high-fidelity embodied underwater environment that simulates a realistic ocean setting with diverse scenes. As illustrated in figure, OceanGym establishes a robust benchmark for evaluating autonomous agents through a series of challenging tasks, encompassing various perception analyses and decision-making navigation. The platform facilitates these evaluations by supporting multi-modal perception and providing action spaces for continuous control.
 
+- OceanGym supports a wide range of underwater targets and allows users to freely create, edit, and customize these **objects** within the environment.
+- The platform incorporates **water–flow and hydrodynamic simulation** (there exists a discrepancy), as well as depth-dependent lighting and visibility modeling, enabling reproduction of underwater conditions.
+- Users can flexibly **modify environmental parameters**, inject new scenes, or adjust task settings, serving as a versatile testbed for benchmarking and developing underwater autonomous agents.
+
 > We have provided a teaching demonstration video here:[bilibili](https://www.bilibili.com/video/BV1vu4QzpEzQ/?vd_source=320a580e2cf65df21924b079ad11371c)
 
 # 💐 Acknowledgement
