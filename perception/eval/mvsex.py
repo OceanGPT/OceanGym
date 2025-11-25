@@ -326,19 +326,69 @@ if __name__ == "__main__":
 
     PROMPT_SONAR = f"This sonar image can be used as a reference to assist in identifying the next color image."
 
-    PROMPT00 = f"""You are an assistant that analyzes an image and checks which of the following options appear in it. Before that, I have already provide you a sonar image for reference only.
+# Old Prompt
+#     PROMPT00 = f"""You are an assistant that analyzes an image and checks which of the following options appear in it. Before that, I have already provide you a sonar image for reference only.
 
-Options:
-{OPTS}
+# Options:
+# {OPTS}
 
-Instructions:
-- Only when you find it difficult to recognize the color image, I suggest you refer to the previous sonar image together.
-- Carefully examine the image, even the corners.
-- You can choose single or multiple options, if none of the options appear, just return an empty Python list.
-- For multiple-choice questions, no points will be awarded for incomplete selections, over-selections, or incorrect selections.
-- The output must be a valid Python list (only list, no explanation, no extra text).
-"""
+# Instructions:
+# - Only when you find it difficult to recognize the color image, I suggest you refer to the previous sonar image together.
+# - Carefully examine the image, even the corners.
+# - You can choose single or multiple options, if none of the options appear, just return an empty Python list.
+# - For multiple-choice questions, no points will be awarded for incomplete selections, over-selections, or incorrect selections.
+# - The output must be a valid Python list (only list, no explanation, no extra text).
+# """
 
+    # New Prompt
+    PROMPT00 = f"""
+    You are an assistant that performs **multi-label visual recognition** on an underwater RGB image.
+    Before this RGB image, you have already been shown a **sonar reference image** of (approximately)
+    the same area.
+
+    Your task:
+    - Carefully look at the **current RGB color image** and decide which of the following options
+      actually appear in this RGB image.
+    - You may use the **sonar reference** only when the RGB image is dark, noisy, or ambiguous,
+      to help you confirm shapes and locations of objects.
+    - If the sonar reference and the RGB image conflict, **always trust the RGB image.**
+
+    Options:
+    {OPTS}
+
+    Detailed instructions:
+    1. First, quickly read through all options so you know what kinds of objects to look for.
+    2. Then, carefully scan the entire RGB image (center and all corners), checking:
+       - large structures (e.g., ship, aircraft, pipeline, turbine),
+       - smaller objects (e.g., robot, oil drums, electrical box),
+       - partial/occluded objects that are still clearly recognizable.
+    3. For **each** option in the list, internally decide whether it is:
+       - **clearly present** in the RGB image,
+       - **clearly absent**, or
+       - **uncertain / ambiguous**.
+       If you are uncertain because of low visibility or occlusion, you may re-check the sonar
+       reference to help you decide.
+    4. Only select options that are **clearly present** based on the combined evidence.
+       - Do **not** guess.
+       - Do **not** select an option if you are still uncertain after checking RGB and sonar.
+    5. Ignore any objects that are not mentioned in the options list.
+
+    Output format (very important):
+    - You must output **only** a valid Python list of strings, with no explanation and no extra text.
+    - The strings must match the option texts exactly.
+    - For example:
+      - If the ship and pipeline are present: ["sunken ship", "oil pipe"]
+      - If none of the options appear: []
+
+    Scoring rule reminder:
+    - This is a multiple-choice question.
+    - **All** correct options must be selected.
+    - **No** incorrect options may be selected.
+    - Incomplete selections, over-selections, or wrong selections are all scored as incorrect.
+
+    Now, based on the **current RGB image** (optionally using the previous sonar image as an auxiliary cue),
+    output only the final Python list of selected options.
+    """
     # Argument Parser:
 
     p = argparse.ArgumentParser()
