@@ -1,14 +1,20 @@
-<img width="1140" height="1140" alt="image" src="https://github.com/user-attachments/assets/de174e69-1196-4f4b-8b01-fc9d6d378a08" /><h1 align="center">  <img src="asset/img/OceanGym_logo.png" style="width:5%; height: auto;" align=center> OceanGym  </h1>
-<h3 align="center"> A Benchmark Environment for Underwater Embodied Agents </h3>
+<h1 align="center">
+  <img src="asset/img/OceanGym_logo.png" style="width:5%; height: auto; vertical-align: middle;">
+  OceanGym
+</h1>
 
-<p align="center">
-  🌐 <a href="https://oceangpt.github.io/OceanGym" target="_blank">Home Page</a>
-  📄 <a href="https://arxiv.org/abs/2509.26536" target="_blank">ArXiv Paper</a>
-  🤗 <a href="https://huggingface.co/datasets/zjunlp/OceanGym" target="_blank">Hugging Face</a>
-  ☁️ <a href="https://drive.google.com/file/d/1EfKHeiyQD5eoJ6-EsiJHuIdBRM5Ope5A/view?usp=drive_link" target="_blank">Google Drive</a>
-  ☁️ <a href="https://pan.baidu.com/s/1OKotYiYphSUtUSJH9sWO7A?pwd=txye" target="_blank">Baidu Drive</a>
-</p>
+<h3 align="center">A Benchmark Environment for Underwater Embodied Agents</h3>
 
+<div align="center" style="display: inline-flex; align-items: center; justify-content: center; gap: 20px;">
+  <div style="display: flex; flex-direction: column; justify-content: center; height: 120px;">
+    <span>🌐 <a href="https://oceangpt.github.io/OceanGym" target="_blank">Home Page</a></span>
+    <span>📄 <a href="https://arxiv.org/abs/2509.26536" target="_blank">ArXiv Paper</a></span>
+    <span>🤗 <a href="https://huggingface.co/datasets/zjunlp/OceanGym" target="_blank">Hugging Face</a></span>
+    <span>☁️ <a href="https://drive.google.com/file/d/1EfKHeiyQD5eoJ6-EsiJHuIdBRM5Ope5A/view?usp=drive_link" target="_blank">Google Drive</a></span>
+    <span>☁️ <a href="https://pan.baidu.com/s/1OKotYiYphSUtUSJH9sWO7A?pwd=txye" target="_blank">Baidu Drive</a></span>
+  </div>
+  <img width="180" height="180" alt="OceanGym Environment Preview" src="https://github.com/user-attachments/assets/de174e69-1196-4f4b-8b01-fc9d6d378a08" style="border-radius: 4px;">
+</div>
 
   <img src="asset/img/o1.jpg" style="width:120%; height: auto;" align=center>
 
