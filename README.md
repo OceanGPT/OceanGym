@@ -1,4 +1,4 @@
-<h1 align="center">  <img src="asset/img/OceanGym_logo.png" style="width:5%; height: auto;" align=center> OceanGym  </h1>
+<img width="1140" height="1140" alt="image" src="https://github.com/user-attachments/assets/de174e69-1196-4f4b-8b01-fc9d6d378a08" /><h1 align="center">  <img src="asset/img/OceanGym_logo.png" style="width:5%; height: auto;" align=center> OceanGym  </h1>
 <h3 align="center"> A Benchmark Environment for Underwater Embodied Agents </h3>
 
 <p align="center">
@@ -6,8 +6,9 @@
   📄 <a href="https://arxiv.org/abs/2509.26536" target="_blank">ArXiv Paper</a>
   🤗 <a href="https://huggingface.co/datasets/zjunlp/OceanGym" target="_blank">Hugging Face</a>
   ☁️ <a href="https://drive.google.com/file/d/1EfKHeiyQD5eoJ6-EsiJHuIdBRM5Ope5A/view?usp=drive_link" target="_blank">Google Drive</a>
-  ☁️ <a href="https://pan.baidu.com/s/16h86huHLeFGAKatRWvLrFQ?pwd=wput" target="_blank">Baidu Drive</a>
+  ☁️ <a href="https://pan.baidu.com/s/1OKotYiYphSUtUSJH9sWO7A?pwd=txye" target="_blank">Baidu Drive</a>
 </p>
+
 
   <img src="asset/img/o1.jpg" style="width:120%; height: auto;" align=center>
 
@@ -26,6 +27,7 @@ OceanGym environment is built upon Unreal Engine (UE) 5.3, with certain componen
 
 # 🔔 News
 
+- 12-2025, we updated the world that supports underwater current simulation
 - 10-2025, we released the initial version of OceanGym along with the accompanying [paper](https://arxiv.org/abs/2509.26536).
 - 04-2025, we launched the OceanGym project.
 
