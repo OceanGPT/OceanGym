@@ -13,7 +13,6 @@
     <span>☁️ <a href="https://drive.google.com/file/d/1EfKHeiyQD5eoJ6-EsiJHuIdBRM5Ope5A/view?usp=drive_link" target="_blank">Google Drive</a></span>
     <span>☁️ <a href="https://pan.baidu.com/s/1OKotYiYphSUtUSJH9sWO7A?pwd=txye" target="_blank">Baidu Drive</a></span>
   </div>
-  <img width="180" height="180" alt="OceanGym Environment Preview" src="https://github.com/user-attachments/assets/de174e69-1196-4f4b-8b01-fc9d6d378a08" style="border-radius: 4px;">
 </div>
 
   <img src="asset/img/o1.jpg" style="width:120%; height: auto;" align=center>
