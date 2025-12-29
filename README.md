@@ -10,9 +10,17 @@
     <span>🌐 <a href="https://oceangpt.github.io/OceanGym" target="_blank">Home Page</a></span>
     <span>📄 <a href="https://arxiv.org/abs/2509.26536" target="_blank">ArXiv Paper</a></span>
     <span>🤗 <a href="https://huggingface.co/datasets/zjunlp/OceanGym" target="_blank">Hugging Face</a></span>
-    <span>☁️ <a href="https://drive.google.com/file/d/1EfKHeiyQD5eoJ6-EsiJHuIdBRM5Ope5A/view?usp=drive_link" target="_blank">Google Drive</a></span>
+    <span>☁️ <a href="https://drive.google.com/file/d/1EfKHeiyQD5eoJ6-EsiJHuIdBRM5Ope5A/view?usp=drive_link" target="_blank">Google Drive</a></span> 
     <span>☁️ <a href="https://pan.baidu.com/s/1OKotYiYphSUtUSJH9sWO7A?pwd=txye" target="_blank">Baidu Drive</a></span>
   </div>
+</div>
+
+<h5 align="center">  The scene file is available at the following link </h5>
+
+  
+<div  align="center" style="display: inline-flex; align-items: center; justify-content: center; gap: 20px;">
+    <span>☁️ <a href="https://pan.baidu.com/s/1OKotYiYphSUtUSJH9sWO7A?pwd=txye" target="_blank">Baidu Drive</a></span>
+    <span>☁️ <a href="https://pan.baidu.com/s/1k0G2ZLu-ATlecr3C_otdRA?pwd=2w1u" target="_blank">Baidu Drive</a></span>
 </div>
 
   <img src="asset/img/o1.jpg" style="width:120%; height: auto;" align=center>
