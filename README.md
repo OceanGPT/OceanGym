@@ -74,6 +74,8 @@ OceanGym environment is built upon Unreal Engine (UE) 5.3, with certain componen
 - [⏱️ Results](#️-results)
   - [Decision Task](#decision-task-1)
   - [Perception Task](#perception-task-1)
+- [🔧 Develop OceanGym](#-develop-oceangym)
+- [🌉 UE5 to IsaacLab Conversion](#-ue5-to-isaaclab-conversion) 
 - [📚 Datasets](#-datasets)
 - [🚩 Citation](#-citation)
 
@@ -712,6 +714,29 @@ Modify the data of **location** as per your requirements
  <img src="asset/img/pic10.png" style="width: 60%; height: auto;" align="center">
 
  If you want to develop more functions, you can visit [the official website of holoocean](https://byu-holoocean.github.io/holoocean-docs/v2.0.1/develop/develop.html)
+
+# 🌉 UE5 to IsaacLab Conversion
+
+To leverage NVIDIA's GPU-accelerated reinforcement learning and advanced physics simulation, we provide a pipeline to migrate OceanGym assets and control interfaces from Unreal Engine 5 to **IsaacLab** (built on Isaac Sim / Omniverse). 
+
+You can find the related conversion and control scripts in the `OceanGym2isaac` directory.
+
+### Step 1: Export Assets to USD
+IsaacLab natively utilizes the Universal Scene Description (**USD**) framework. To migrate custom UE5 scenes:
+1. Enable the **Omniverse** or **USD Exporter** plugin within your Unreal Engine 5 editor.
+2. Export your underwater landscapes, target objects, and ROV models as `.usd`, `.usdc`, or `.usdz` files.
+3. Place these exported assets into the corresponding `files/usd/` or `files/mesh/` directories in your Isaac workspace.
+> **Note:** Pay attention to relative paths when exporting complex assemblies (like `decration.usdc`), ensuring that sub-meshes and materials maintain their correct directory structures.
+
+### Step 2: Set up the IsaacLab Environment
+Ensure you have [Isaac Sim](https://developer.nvidia.com/isaac-sim) installed. Create a dedicated Conda environment for the bridge:
+```bash
+# Create and activate the environment
+conda create -n env_isaaclab python=3.10
+conda activate env_isaaclab
+
+# Install IsaacLab according to the official NVIDIA documentation
+# e.g., ./isaaclab.sh --install
 
 # 🚩 Citation
 
