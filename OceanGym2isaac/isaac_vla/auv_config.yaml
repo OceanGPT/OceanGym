@@ -1,0 +1,7 @@
+# 关键外部参数
+vla:
+  api_key: ""
+
+paths:
+  auv_usd: "<path to auv.usd>"
+  floor_usd: "<path to floor_collison.usd"
