@@ -733,14 +733,21 @@ To ensure the simulation runs correctly with GPU acceleration, you must first in
 > [!TIP]
 > We recommend using the **Conda** installation method provided in the guide to ensure all dependencies (like PyTorch and NVIDIA Warp) are correctly managed.
 
-### Step 2: Download Oceangym_Isaac.zip
+### Step 2: Download asset.zip
 From 
   ☁️ <a href="https://pan.baidu.com/s/1YJsw6g9a7BN_ovxZgfPnwQ?pwd=acax" target="_blank">Baidu Drive</a>
-  download the **OceanGym_Isaac.zip** And extract it to the `OceanGym2isaac` folder 
+  download the **asset.zip** And extract it to the `OceanGym2isaac` folder 
 
 ### Step 3: Quick Start
 
 Navigate to the `OceanGym2isaac` directory. You can test the simulation using either keyboard control or the VLA model.
+
+> [!IMPORTANT]
+> **Path Configuration:** Before running the simulation, you must modify `auv_config.yaml` to set the **absolute paths** for the simulation assets. 
+> - Update `auv_usd` to the absolute path of **`auv.usd`** (located in the `mesh/` folder).
+> - Update `floor_usd` to the absolute path of **`floor_collision.usd`** (located in the `final_floor/` folder).
+>
+> *Example:* `/home/user/OceanGym2isaac/asset/mesh/auv.usd`
 
 #### ⌨️ Manual Control (Keyboard)
 To manually control the AUV and check the camera views, run:
@@ -758,7 +765,7 @@ Keyboard Control Mapping:
 |Page Down	|Descend the AUV (Vertical Z-)
 
 #### 🤖 Autonomous Task (VLA Model)
-To call a Large Model (Vision-Language-Action) to perform a simple autonomous docking/entry task:
+To call a Large Model (Vision-Language-Action) to perform a simple autonomous docking task:
 ```bash
 python run.py --mode vla --enable_cameras
 ```
