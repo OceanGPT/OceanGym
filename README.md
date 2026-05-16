@@ -742,12 +742,12 @@ From
 
 Navigate to the `OceanGym2isaac` directory. You can test the simulation using either keyboard control or the VLA model.
 
-> [!IMPORTANT]
-> **Path Configuration:** Before running the simulation, you must modify `auv_config.yaml` to set the **absolute paths** for the simulation assets. 
-> - Update `auv_usd` to the absolute path of **`auv.usd`** (located in the `mesh/` folder).
-> - Update `floor_usd` to the absolute path of **`floor_collision.usd`** (located in the `final_floor/` folder).
->
-> *Example:* `/home/user/OceanGym2isaac/asset/mesh/auv.usd`
+**Path Configuration:** 
+Before running the simulation, you must modify `auv_config.yaml` to set the **absolute paths** for the simulation assets. 
+* Update `auv_usd` to the absolute path of **`auv.usd`** (located in the `mesh/` folder).
+* Update `floor_usd` to the absolute path of **`floor_collision.usd`** (located in the `final_floor/` folder).
+
+*Example:* `/home/user/OceanGym2isaac/asset/mesh/auv.usd`
 
 #### ⌨️ Manual Control (Keyboard)
 To manually control the AUV and check the camera views, run:
