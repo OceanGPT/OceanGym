@@ -43,17 +43,15 @@ from utils.asycn import AsyncAUVController
 from utils.prompt.dock import formatted_prompt
 
 def enable_translucency():
-    # 获取设置接口
+    
     settings = carb.settings.get_settings()
     
-    # 路径说明：开启 RTX Real-Time 模式下的半透明设置
-    # 注意：如果使用 Path Tracing，路径会有所不同
+ 
     settings.set("/rtx/translucency/enabled", True)
     
-    # 可选：进一步优化水下半透明效果的参数（如折射层数等）
     settings.set("/rtx/translucency/maxRefractionBounces", 4)
-    print("[INFO] 已自动开启 Translucency 渲染选项")
-# --- 原始功能函数 (完全保留逻辑) ---
+   
+
 def get_single_random_auv_pos():
     x_range = (-500.0, 500.0)
     y_range = (-500.0, 500.0)
@@ -120,7 +118,7 @@ class OceanSceneCfg(InteractiveSceneCfg):
         ),
     )
 
-    # 相机配置保持完全一致...
+    
     cam_front = CameraCfg(
         prim_path="{ENV_REGEX_NS}/AUV/cam_front",
         update_period=0, height=240, width=320, data_types=["rgb","distance_to_camera"],
@@ -183,16 +181,16 @@ def main():
     cam_manager = UnderwaterCameraManager(camera_sensors)
     monitor_cam_manager = UnderwaterScene(scene["cam_follow"], device="cuda:0")
     
-    # --- 自动化与日志逻辑变量 ---
+  
     trajectory_log = []           
     MAX_STEPS = 9000             
     STOP_THRESHOLD = 5            
     consecutive_stop_count = 0 
     
-    # --- 控制器分支初始化 ---
+    
     if args_cli.mode == "vla":
-        # 改为从配置文件读取 API Key
-        vla_client = VLAController(api_key=cfg['vla']['api_key'])
+        
+        vla_client = VLAController(api_key=cfg['vla']['api_key'],api_base=cfg['vla']['api_base'])
         async_ctrl = AsyncAUVController(vla_client, speed_scale=10.0)
     else:
         kb_cfg = Se2KeyboardCfg(v_x_sensitivity=400.0, v_y_sensitivity=400.0)
@@ -276,7 +274,7 @@ As the Control Expert, based on your analysis of the provided real-time images, 
        
             step_count += 1
             
-    # 保存轨迹逻辑保持不变...
+   
     parent_dir = "experiment"
     sub_dir = "llm"
     target_folder = os.path.join(parent_dir, sub_dir)
