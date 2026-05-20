@@ -195,7 +195,7 @@ def main():
     # --- Controller Branch Initialization ---
     if args_cli.mode == "vla":
         # Modified to read API Key from configuration file
-        vla_client = VLAController(api_key=cfg['vla']['api_key'],api_base=cfg['vla']['api_base'])
+        vla_client = VLAController(api_key=cfg['vla']['api_key'],model_name=cfg['vla']['model_name'],api_base=cfg['vla']['api_base'])
         async_ctrl = AsyncAUVController(vla_client, speed_scale=10.0)
     else:
         kb_cfg = Se2KeyboardCfg(v_x_sensitivity=400.0, v_y_sensitivity=400.0)
