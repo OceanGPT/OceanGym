@@ -775,55 +775,6 @@ python run.py --mode vla --enable_cameras
 > [!NOTE]
 > You need to modify the YAML file first to set the required runtime parameters.
 
-### 🏋️ Reinforcement Learning (RL) Workflow
-
-Follow these steps to configure, train, and evaluate the ROV using Proximal Policy Optimization (PPO) via the `skrl` framework.
-
-#### 1. Navigate to the Task Directory
-First, ensure you are inside the reinforcement learning environment directory:
-```bash
-cd OceanGym2isaac/isaac_rl
-
-```
-
-#### 2. Download and Place Assets (USD)
-
-1. Download the **asset.zip** package from ☁️ <a href="https://pan.baidu.com/s/10v0-xp6Nl0JULfi5ydILiQ?pwd=wmq9" target="_blank">Baidu Drive</a>\.
-2. Extract the contents to where you want.
-
-#### 3. Path Configuration (`config.yaml`)
-
-Before starting any training or evaluation, you must update the asset paths in `config.yaml` to match your local absolute paths. Open `config.yaml` and modify the following fields:
-
-```yaml
-paths:
-  sea_floor_usd: "absolute path of floor_collison.usd" (located in the `final_floor/` folder)
-  robot_usd: "absolute path of BlueROV1.usd" (located in the `usd/` folder)
-
-```
-
-#### 4. Policy Training
-
-To launch parallel training across multiple environments using PPO:
-
-```bash
-python train.py --task Isaac-ROV-Docking-Direct-v0 --num_envs 64 --headless
-
-```
-
-* **Visualization:** Remove the `--headless` flag if you want to bring up the Isaac Sim GUI and watch the ROV learn in real-time.
-* **Monitoring:** Training logs, tensorboard telemetry, and model checkpoints will be stored under the `runs/` directory. Monitor the training progress by running:
-```bash
-tensorboard --logdir runs
-
-```
-
-#### 5. Policy Evaluation & Testing
-To test and visualize your trained model checkpoint (e.g., the saved `best_agent.pt` file):
-```bash
-python evaluate.py --task Isaac-ROV-Docking-Direct-v0 --checkpoint runs/ROV_Docking_Train/checkpoints/best_agent.pt --num_envs 1
-
-```
 
 # 🚩 Citation
 
