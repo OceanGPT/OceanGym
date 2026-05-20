@@ -1,4 +1,0 @@
-# config.yaml
-paths:
-  sea_floor_usd: "path to floor_collison.usd"
-  robot_usd: "path to BlueROV1.usd"
