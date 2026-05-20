@@ -5,19 +5,19 @@ import warp as wp
 import random
 import os
 import json
-import yaml  # 新增：用于解析 YAML
+import yaml  
 
 # 1. basic AppLauncher asset
 from isaaclab.app import AppLauncher
 
-# --- 修改参数解析部分 ---
-parser = argparse.ArgumentParser(description="Isaac Lab AUV VLA 闭环控制系统 - 完整自动化版")
+# --- Argument Parsing Section ---
+parser = argparse.ArgumentParser(description="Isaac Lab AUV VLA Closed-Loop Control System - Fully Automated Version")
 parser.add_argument("--mode", type=str, default="vla", choices=["vla", "keyboard"], help="Control mode: 'vla' for AI, 'keyboard' for manual")
-parser.add_argument("--config", type=str, default="auv_config.yaml", help="Path to the config file") # 新增参数
+parser.add_argument("--config", type=str, default="auv_config.yaml", help="Path to the config file") # Added parameter
 AppLauncher.add_app_launcher_args(parser)
 args_cli = parser.parse_args()
 
-# --- 加载 YAML 配置文件 ---
+# --- Load YAML Configuration File ---
 with open(args_cli.config, 'r') as f:
     cfg = yaml.safe_load(f)
 
@@ -32,10 +32,12 @@ from isaaclab.sim import SimulationContext
 from isaaclab.utils import configclass
 from isaaclab.sensors import CameraCfg
 from isaaclab.devices import Se2Keyboard, Se2KeyboardCfg  
+import isaaclab.utils.math as math_utils  # Added: for quaternion to rotation matrix conversion
 import omni.ui as ui
 import carb.input
 import omni.appwindow
 import carb
+
 # Import custom utility classes
 from utils.camera import UnderwaterCameraManager, UnderwaterScene
 from utils.llm import VLAController
@@ -43,15 +45,18 @@ from utils.asycn import AsyncAUVController
 from utils.prompt.dock import formatted_prompt
 
 def enable_translucency():
-    
+    # Get settings interface
     settings = carb.settings.get_settings()
     
- 
+    # Enable translucency setting under RTX Real-Time mode
+    # Note: If using Path Tracing, the path will be different
     settings.set("/rtx/translucency/enabled", True)
     
+    # Optional: Further optimize underwater translucency parameters (e.g., refraction bounces)
     settings.set("/rtx/translucency/maxRefractionBounces", 4)
-   
+    print("[INFO] Translucency rendering option enabled automatically")
 
+# --- Original Utility Functions (Logic fully preserved) ---
 def get_single_random_auv_pos():
     x_range = (-500.0, 500.0)
     y_range = (-500.0, 500.0)
@@ -93,7 +98,7 @@ class OceanSceneCfg(InteractiveSceneCfg):
     ocean_floor = AssetBaseCfg(
         prim_path="/World/OceanFloor",
         spawn=sim_utils.UsdFileCfg(
-            usd_path=cfg['paths']['floor_usd'], # 改为从配置文件读取
+            usd_path=cfg['paths']['floor_usd'], # Modified to read from config file
             scale=(1.0, 1.0, 1.0),
             collision_props=sim_utils.CollisionPropertiesCfg(),
         )
@@ -102,7 +107,7 @@ class OceanSceneCfg(InteractiveSceneCfg):
     auv = RigidObjectCfg(
         prim_path="{ENV_REGEX_NS}/AUV",
         spawn=sim_utils.UsdFileCfg(
-            usd_path=cfg['paths']['auv_usd'], # 改为从配置文件读取
+            usd_path=cfg['paths']['auv_usd'], # Modified to read from config file
             rigid_props=sim_utils.RigidBodyPropertiesCfg(
                 rigid_body_enabled=True,
                 max_depenetration_velocity=1.0,
@@ -118,7 +123,7 @@ class OceanSceneCfg(InteractiveSceneCfg):
         ),
     )
 
-    
+    # Camera configurations remain completely unchanged...
     cam_front = CameraCfg(
         prim_path="{ENV_REGEX_NS}/AUV/cam_front",
         update_period=0, height=240, width=320, data_types=["rgb","distance_to_camera"],
@@ -181,15 +186,15 @@ def main():
     cam_manager = UnderwaterCameraManager(camera_sensors)
     monitor_cam_manager = UnderwaterScene(scene["cam_follow"], device="cuda:0")
     
-  
+    # --- Automation and Logging Logic Variables ---
     trajectory_log = []           
     MAX_STEPS = 9000             
     STOP_THRESHOLD = 5            
     consecutive_stop_count = 0 
     
-    
+    # --- Controller Branch Initialization ---
     if args_cli.mode == "vla":
-        
+        # Modified to read API Key from configuration file
         vla_client = VLAController(api_key=cfg['vla']['api_key'],api_base=cfg['vla']['api_base'])
         async_ctrl = AsyncAUVController(vla_client, speed_scale=10.0)
     else:
@@ -197,19 +202,19 @@ def main():
         keyboard = Se2Keyboard(kb_cfg)
         _input = carb.input.acquire_input_interface()
         _kb_device = omni.appwindow.get_default_app_window().get_keyboard()
-        print("[INFO] Manual Control: 方向键(水平), PageUp/PageDown(升降)")
+        print("[INFO] Manual Control: Arrow keys (Body-relative direction), PageUp/PageDown (Altitude), Q/E (Rotate Left/Right)")
 
     sim_context.reset()
     enable_translucency()
     current_vel = torch.zeros((1, 6), device="cuda:0")
     step_count = 0
     
-    print("[INFO] 仿真开始执行...")
+    print("[INFO] Simulation starting...")
 
     while simulation_app.is_running():
         if sim_context.is_playing():
             if step_count >= MAX_STEPS:
-                print(f"[TERMINATE] 达到时间上限 ({MAX_STEPS} 步)，自动停止。")
+                print(f"[TERMINATE] Maximum step limit reached ({MAX_STEPS} steps), stopping automatically.")
                 break
 
             auv_robot.update(dt=0.02)
@@ -222,15 +227,34 @@ def main():
             if args_cli.mode == "keyboard":
                 kb_data = keyboard.advance()
                 vz = 0.0
+                wz = 0.0  
+                
+                # Altitude Control
                 if _input.get_keyboard_value(_kb_device, carb.input.KeyboardInput.PAGE_UP):
                     vz = 400.0
                 elif _input.get_keyboard_value(_kb_device, carb.input.KeyboardInput.PAGE_DOWN):
                     vz = -400.0
                 
+                # Rotation Control: Q for Left Yaw, E for Right Yaw
+                if _input.get_keyboard_value(_kb_device, carb.input.KeyboardInput.Q):
+                    wz = 2.0  
+                elif _input.get_keyboard_value(_kb_device, carb.input.KeyboardInput.E):
+                    wz = -2.0
+                
+                # 1. Assemble desired velocity in Body Frame
+                # kb_data[0] represents body forward/backward, kb_data[1] represents body left/right
+                body_vel_lin = torch.tensor([[kb_data[0], kb_data[1], vz]], device="cuda:0") 
+
+                # 2. Get AUV current quaternion orientation in World Frame [w, x, y, z]
+                auv_quat_w = auv_robot.data.root_quat_w[0:1] 
+
+                # 3. Rotate linear velocity vector from Body Frame to World Frame
+                world_vel_lin = math_utils.quat_rotate(auv_quat_w, body_vel_lin)
+
+                # 4. Write converted World Frame linear velocity and angular velocity into control tensor
                 new_vel = torch.zeros((1, 6), device="cuda:0")
-                new_vel[0, 0] = kb_data[0] 
-                new_vel[0, 1] = kb_data[1] 
-                new_vel[0, 2] = vz         
+                new_vel[0, 0:3] = world_vel_lin[0] # Transformed World Frame linear velocity vx, vy, vz
+                new_vel[0, 5] = wz                 # Rotation angular velocity wz
                 current_vel = new_vel
             
             auv_robot.write_root_velocity_to_sim(current_vel * get_speed(current_z))
@@ -264,17 +288,17 @@ As the Control Expert, based on your analysis of the provided real-time images, 
                     
                     if torch.all(current_vel == 0):
                         consecutive_stop_count += 1
-                        print(f"[VLA] 连续收到第 {consecutive_stop_count} 次 STOP 指令")
+                        print(f"[VLA] Consecutive STOP command received: count={consecutive_stop_count}")
                     else:
                         consecutive_stop_count = 0 
                     
                     if consecutive_stop_count >= STOP_THRESHOLD:
-                        print(f"[TERMINATE] VLA 连续发出 {STOP_THRESHOLD} 次停止信号，任务完成。")
+                        print(f"[TERMINATE] VLA sent {STOP_THRESHOLD} consecutive STOP signals. Task completed.")
                         break
        
             step_count += 1
             
-   
+    # Trajectory saving logic remains unchanged...
     parent_dir = "experiment"
     sub_dir = "llm"
     target_folder = os.path.join(parent_dir, sub_dir)
@@ -294,9 +318,9 @@ As the Control Expert, based on your analysis of the provided real-time images, 
     try:
         with open(log_path, "w") as f:
             json.dump(trajectory_log, f, indent=4)
-        print(f"\n[SUCCESS] 实验数据已导出至: {log_path}")
+        print(f"\n[SUCCESS] Experimental data exported to: {log_path}")
     except Exception as e:
-        print(f"[ERROR] 写入日志文件时出错: {e}")
+        print(f"[ERROR] Error writing to log file: {e}")
         
     simulation_app.close()
 
