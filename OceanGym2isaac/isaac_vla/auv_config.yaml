@@ -1,6 +1,7 @@
 # 关键外部参数
 vla:
   api_key: ""
+  model_name: ""
   api_base: ""
 paths:
   auv_usd: "<path to auv.usd>"
