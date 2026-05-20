@@ -757,12 +757,15 @@ python run.py --mode keyboard --enable_cameras
 Keyboard Control Mapping:
 | Key | function |
 | ---| --- |
-|Up Arrow	|Move the AUV forward (Linear X+)
-|Down Arrow	|Move the AUV backward (Linear X-)
-|Left Arrow	|Turn the AUV left (Yaw+)
-|Right Arrow	|Turn the AUV right (Yaw-)
-|Page Up	|Ascend the AUV (Vertical Z+)
-|Page Down	|Descend the AUV (Vertical Z-)
+|Up Arrow	|Move the AUV forward 
+|Down Arrow	|Move the AUV backward 
+|Left Arrow	|Move the AUV left 
+|Right Arrow	|Move the AUV right 
+|Page Up	|Ascend the AUV 
+|Page Down	|Descend the AUV 
+|Q | Rotote AUV Left
+|E | Rotate AUV Right
+
 
 #### 🤖 Autonomous Task (VLA Model)
 To call a Large Model (Vision-Language-Action) to perform a simple autonomous docking task:
