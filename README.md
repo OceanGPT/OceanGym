@@ -729,10 +729,11 @@ To ensure the simulation runs correctly with GPU acceleration, you must first in
 1.  **System Requirements:** A Linux-based system (Ubuntu 20.04/22.04) with an NVIDIA GPU (RTX 30-series or higher recommended).
 2.  **Follow the Official Installation Guide:**  
     Please complete the setup by following the step-by-step instructions here:  
-    👉 **[Isaac Lab Installation Guide](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html)**
+    👉 **[Isaac Lab Installation Guide](https://isaac-sim.github.io/IsaacLab/main/source/setup/quickstart.html)**
 
 > [!TIP]
 > We recommend using the **Conda** installation method provided in the guide to ensure all dependencies (like PyTorch and NVIDIA Warp) are correctly managed.
+> IsaacSim Version 5.1.0
 
 ### Step 2: Download asset.zip
 From 
