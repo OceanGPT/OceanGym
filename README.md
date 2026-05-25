@@ -733,6 +733,7 @@ To ensure the simulation runs correctly with GPU acceleration, you must first in
 
 > [!TIP]
 > We recommend using the **Conda** installation method provided in the guide to ensure all dependencies (like PyTorch and NVIDIA Warp) are correctly managed.
+> 
 > IsaacSim Version 5.1.0
 
 ### Step 2: Download asset.zip
