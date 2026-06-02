@@ -778,7 +778,39 @@ python run.py --mode vla --enable_cameras
 > [!NOTE]
 > You need to modify the YAML file first to set the required runtime parameters.
 
+# 🔧 Develop OceanGym2Isaac
+OceanGym2Isaac brings the customized underwater exploration scenarios of OceanGym into the NVIDIA Isaac Sim / Isaac Lab ecosystem. Leveraging Omniverse's RTX rendering and physics engine, you can simulate high-fidelity underwater environments, advanced hydrodynamics, and deploy reinforcement learning (RL) agents at scale.
 
+You can import various oceanic assets from the NVIDIA Omniverse Nucleus or external USD repositories, and simulate extreme underwater weather conditions by tweaking environment parameters.\
+### Modify lighting
+
+
+
+### 1Modify Environment Lighting
+
+
+### Step-by-Step Guide:
+
+Step 1:
+Find the **Light** in outliner
+
+Step 2:
+Choose the details of **Light**
+
+Step 3:
+Modify the data of **light** as per your requirements
+
+<img src="asset/img/pic20.png" style="width: 60%; height: auto;" align="center">
+---
+
+### Advanced Development & Extensions
+
+OceanGym2Isaac thrives on the extensibility of NVIDIA Omniverse. To develop advanced capabilities such as synthetic data generation (SDG), multi-camera setups, or custom ROS2 bridges, please refer to the official core documentation:
+
+* 👉 **[NVIDIA Isaac Sim Documentation](https://www.google.com/search?q=https://docs.omniverse.nvidia.com/isaacsim/latest/index.html)**
+* 👉 **[Isaac Lab (formerly Orbit) Documentation](https://isaac-sim.github.io/IsaacLab/)**
+
+* 
 # 🚩 Citation
 
 If this OceanGym paper or benchmark is helpful, please kindly cite as this:
