@@ -752,6 +752,10 @@ Before running the simulation, you must modify `auv_config.yaml` to set the **ab
 
 *Example:* `/home/user/OceanGym2isaac/asset/mesh/auv.usd`
 
+
+ <img src="asset/img/pic21.png" style="width: 60%; height: auto;" align="center">
+
+
 #### ⌨️ Manual Control (Keyboard)
 To manually control the AUV and check the camera views, run:
 ```bash
