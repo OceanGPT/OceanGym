@@ -785,10 +785,6 @@ You can import various oceanic assets from the NVIDIA Omniverse Nucleus or exter
 ### Modify lighting
 
 
-
-### 1Modify Environment Lighting
-
-
 ### Step-by-Step Guide:
 
 Step 1:
@@ -810,7 +806,7 @@ OceanGym2Isaac thrives on the extensibility of NVIDIA Omniverse. To develop adva
 * 👉 **[NVIDIA Isaac Sim Documentation](https://www.google.com/search?q=https://docs.omniverse.nvidia.com/isaacsim/latest/index.html)**
 * 👉 **[Isaac Lab (formerly Orbit) Documentation](https://isaac-sim.github.io/IsaacLab/)**
 
-* 
+
 # 🚩 Citation
 
 If this OceanGym paper or benchmark is helpful, please kindly cite as this:
