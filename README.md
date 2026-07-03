@@ -738,7 +738,9 @@ To ensure the simulation runs correctly with GPU acceleration, you must first in
 
 ### Step 2: Download asset.zip
 From 
-  ☁️ <a href="https://pan.baidu.com/s/10v0-xp6Nl0JULfi5ydILiQ?pwd=wmq9" target="_blank">Baidu Drive</a>
+  ☁️ <a href="https://pan.baidu.com/s/10v0-xp6Nl0JULfi5ydILiQ?pwd=wmq9" target="_blank">Baidu Drive</a> or
+  ☁️ <a href="https://drive.google.com/file/d/1ochazL0sxvZYBHdLzSDDVLWBe48M_Us0/view?usp=drive_link" target="_blank">Google Drive</a>
+  
   download the **asset.zip** And extract it to the `OceanGym2isaac` folder 
 
 ### Step 3: Quick Start
