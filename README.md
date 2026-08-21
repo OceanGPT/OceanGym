@@ -40,6 +40,7 @@ OceanGym environment is built upon Unreal Engine (UE) 5.3, with certain componen
 
 # 🔔 News
 
+- 08-2026, our paper has been accepted to the EMNLP 2026 Main Conference.
 - 05-2026, we moved our environment to issac lab, and now we can run our benchmarks in issac lab! 
 - 12-2025, we updated the world that supports underwater current simulation.
 - 10-2025, we released the initial version of OceanGym along with the accompanying [paper](https://arxiv.org/abs/2509.26536).
